@@ -14,5 +14,7 @@ def entryScreen():
 def home():
     return render_template("EntryScreen.html")
 
+@app.route("/enter", methods = ['POST'])
+
 if __name__ == '__main__':
     app.run(debug=True)
