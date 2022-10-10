@@ -513,6 +513,7 @@
 			<div class="column2">
 				<div class="box2" style="font-size:90%;color:limegreen"><br>F12 <br> Clear <br> Game</div>
 			</div>
+			<input type="button" value="Enter" onclick="playerAdd(this.form);"/><br>
 			
 		</div>
 		<!-- Bottom Note -->
@@ -528,6 +529,7 @@
 
 			return false;
 		}
+		});
 			function playerAdd(form){
 				var red1ID = 1;
 				var red1FirstName = form.red1fname.value;
@@ -635,10 +637,10 @@
 					var sendData = JSON.parse(this.responseText);
 				};
 
+				console.log(players)
+
 				sendData = JSON.stringify(players);
 				test.send(sendData);
-				
-				window.location.replace('http://127.0.0.1:5000/game');
 			}
 	</script>
 	</body>
