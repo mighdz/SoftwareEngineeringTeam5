@@ -4,11 +4,11 @@
 
 # Team members
 1. Preston Birdsong
-1. Grant Botti
-1. Miguel Hernandez-Gonzalez
-1. Len Huang
-1. Keith Mussino
-1. Dylan Vaughn
+2. Grant Botti
+3. Miguel Hernandez-Gonzalez
+4. Len Huang
+5. Keith Mussino
+6. Dylan Vaughn
 
 # To run our Laser-Tag project
 ```python 
