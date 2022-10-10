@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" id = "next";>
 	<head>
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-		<title>Entry Terminal</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<title>Entry Terminal</title>
 	</head>
 	<style>
 		* {
@@ -59,8 +59,8 @@
 			margin: 0px;
 		}
 	</style>
-	<body style="background-color:black"
-	
+	<body style="background-color:black">
+	<form name="playerForm">
 		<!-- Header -->
 		<h1 style="text-align:center;color:white">Edit Current Game</h1>
 		
@@ -72,11 +72,11 @@
 					<!-- Red Team Name -->
 					<h2 style="color:white">Red Team</h2>
 					
-					<p style= "color:white">Code Name &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; First Name &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Last Name</p>
+					<p style= "color:white">First Name &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Last Name &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Code Name</p>
 					<label for="red1" style="font-size:115%;color:white"> 1: </label>
-					<input type="text" id="red1code" name="red1code" type="text" value="" size="15" style="font-size:115%">
-					<input type="text" id="red1fname" name="red1fname" type="text" value="" size="15" style="font-size:115%">
-					<input type="text" id="red1lname" name="red1lname" type="text" value="" size="15" style="font-size:115%">
+					<input id="red1fname" name="1redfName" type="text" value="" size="15" style="font-size:115%">
+					<input id="red1lname" name="1redlName" type="text" value="" size="15" style="font-size:115%">
+					<input id="red1code" name="1redCode" type="text" value="" size="15" style="font-size:115%">
 					
 				</center>
 			</div>
@@ -87,18 +87,18 @@
 					<!-- Green Team Name -->
 					<h2 style="color:white">Green Team</h2>
 					
-					<p style= "color:white">Code Name &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; First Name &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Last Name</p>
+					<p style= "color:white">First Name &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Last Name &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Code Name</p>
 					<label for="green1" style="font-size:115%;color:white">1: </label>
-					<input type="text" id="green1code" name="green1code" type="text" value="" size="15" style="font-size:115%">
-					<input type="text" id="green1fname" name="green1fname" type="text" value="" size="15" style="font-size:115%">
-					<input type="text" id="green1lname" name="green1lname" type="text" value="" size="15" style="font-size:115%">
-					
+					<input id="green1fname" name="1greenfName" type="text" value="" size="15" style="font-size:115%">
+					<input id="green1lname" name="1greenlName" type="text" value="" size="15" style="font-size:115%">
+					<input id="green1code" name="1greenCode" type="text" value="" size="15" style="font-size:115%">
+
 				</center>
 			</div>
 		</div>
 		
 		<!-- Red Player 2 and Green Player 2 -->
-		<div class="row">
+		 <div class="row">
 			<div class="column" style="background-color:firebrick">
 				<center>
 					
@@ -123,7 +123,7 @@
 		</div>
 		
 		<!-- Red Player 3 and Green Player 3 -->
-		<div class="row">
+		 <div class="row">
 			<div class="column" style="background-color:firebrick">
 				<center>
 					
@@ -145,10 +145,10 @@
 					
 				</center>
 			</div>
-		</div>
+		 </div>
 		
 		<!-- Red Player 4 and Green Player 4 -->
-		<div class="row">
+		 <div class="row">
 			<div class="column" style="background-color:firebrick">
 				<center>
 					
@@ -195,7 +195,7 @@
 					
 				</center>
 			</div>
-		</div>
+		</div> 
 	
 		<!-- Red Player 6 and Green Player 6 -->
 		<div class="row">
@@ -246,7 +246,6 @@
 				</center>
 			</div>
 		</div>
-	
 		<!-- Red Player 8 and Green Player 8 -->
 		<div class="row">
 			<div class="column" style="background-color:firebrick">
@@ -449,7 +448,8 @@
 		
 		<!-- Game Mode -->
 		<center>
-				<div class="box1" style="font-size:90%;color:white">Game Mode: Standard public mode</div>
+				<!--<div class="box1" style="font-size:90%;color:white">Game Mode: Standard public mode</div>-->
+				<input type="button" value="Enter" onclick="playerAdd(this.form)"/><br>
 		</center>
 		
 		<!-- Buttons -->
@@ -506,7 +506,7 @@
 			</div>
 			
 			<!-- F11 -->
-			<div class="column2">
+			<div class="column2"> 
 				
 			</div>
 			
@@ -514,52 +514,52 @@
 			<div class="column2">
 				<div class="box2" style="font-size:90%;color:limegreen"><br>F12 <br> Clear <br> Game</div>
 			</div>
-			<input type="button" value="Enter" onclick="playerAdd(this.form);"/><br>
 			
 		</div>
+	</form> 
 		<!-- Bottom Note -->
 		<div class="box3">&lt;Del&gt; to Delete Player, &lt;Ins&gt; to Manually Insert, or edit codename</div>
+	</body>
 		<script>
 			function playerAdd(form){
-				var red1ID = 1;
-				var red1FirstName = form.red1fname.value;
-				var red1LastName = form.red1lname.value;
-				var red1CodeName = form.red1code.value;
+				var red1id = 1;
+				var red1firstName = form.red1fname.value;
+				var red1lastName = form.red1lname.value;
+				var red1codeName = form.red1code.value;
 
-				var green1ID = 2;
-				var green1FirstName = form.green1fname.value;
-				var green1LastName = form.green1lname.value;
-				var green1CodeName = form.green1code.value;
+				var green1id = 2;
+				var green1firstName = form.green1fname.value;
+				var green1lastName = form.green1lname.value;
+				var green1codeName = form.green1code.value;
 
 				var red1 = {
-					red1ID : red1ID,
-					red1FirstName : red1FirstName,
-					red1LastName : red1LastName,
-					red1CodeName : red1CodeName
+					red1ID : red1id,
+					red1FirstName : red1firstName,
+					red1LastName : red1lastName,
+					red1CodeName : red1codeName
 				};
 
 				var green1 = {
-					green1ID : green1ID,
-					green1FirstName : green1FirstName,
-					green1LastName : green1LastName,
-					green1CodeName : green1CodeName
+					green1ID : green1id,
+					green1FirstName : green1firstName,
+					green1LastName : green1lastName,
+					green1CodeName : green1codeName
 				};
 
 				var players = Object.assign({}, red1, green1);
 
-				test = new XMLHttpRequest();
+				connection = new XMLHttpRequest();
 			
-				test.open('POST', '/submit', true);
+				connection.open('POST', '/submit', true);
 
-				test.onload = function(){
-					var dataSend = JSON.parse(this.responseText);
+				connection.onload = function(){
+					var data = JSON.parse(this.responseText);
 				};
 
 				console.log(players)
 
-				sendData = JSON.stringify(players);
-				test.send(sendData);
+				sendingData = JSON.stringify(players);
+				connection.send(sendingData);
 			}
 	</script>
-	</body>
 </html>

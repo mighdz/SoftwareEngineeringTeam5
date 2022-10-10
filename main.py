@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, jsonify, json
-from herokudb import Heroku
+from herokudb import HerokuConnect
 
 app = Flask(__name__)
 
 #Declare class from herokudb.py
-herokudb = Heroku()
+hdb = HerokuConnect()
 
 @app.route("/")
 def entryScreen():
@@ -21,27 +21,27 @@ def enterPlayers():
 
     if request.method == 'POST':
 
-        playerData = request.get_json(force=True)
-        for i in playerData.keys():
-            for j in playerData.values():
+        playerValues = request.get_json(force=True)
+        for i in playerValues.keys():
+            for j in playerValues.values():
                 playerInformation.append(i)
                 playerInformation.append(j)
         
-        id = playerData["red1ID"]
-        firstName = playerData["red1FirstName"]
-        lastName = playerData["red1LastName"]
-        codename = playerData["red1CodeName"]
+        id = playerValues["red1ID"]
+        firstName = playerValues["red1FirstName"]
+        lastName = playerValues["red1LastName"]
+        codeName = playerValues["red1CodeName"]
+        
+        hdb.playerAdd(id, firstName, lastName, codeName)
 
-        herokudb.playerAdd(id,firstName,lastName,codename)
+        id = playerValues["green1ID"]
+        firstName = playerValues["green1FirstName"]
+        lastName = playerValues["green1LastName"]
+        codeName = playerValues["green1CodeName"]
 
-        id = playerData["green1ID"]
-        firstName = playerData["green1FirstName"]
-        lastName = playerData["green1LastName"]
-        codename = playerData["green1CodeName"]
+        hdb.playerAdd(id, firstName, lastName, codeName)
 
-        herokudb.playerAdd(id,firstName,lastName,codename)
-
-    return jsonify(playerData)
+    return jsonify(playerValues)
 
 if __name__ == '__main__':
     app.run(debug=True)
