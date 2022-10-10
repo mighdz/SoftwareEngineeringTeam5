@@ -27,7 +27,7 @@ To install on Windows:
 Download from the following website: 
 https://git-scm.com/download/win 
 
-#Once Git is installed, you are ready to download Heroku. 
+# Once Git is installed, you are ready to download Heroku. 
 On Mac, simply do: 
 ```
 $ brew tap heroku/brew && brew install heroku
@@ -41,7 +41,8 @@ For 32-bit click here:
 https://cli-assets.heroku.com/heroku-x86.exe
 
 Verify your installation with: 
-```$ heroku --version
+```
+$ heroku --version
 ```
 # To run our Laser-Tag project
 ```python 
