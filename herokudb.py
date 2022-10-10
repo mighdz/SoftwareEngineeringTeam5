@@ -12,7 +12,7 @@ class Heroku():
         self.codeName = codename
 
         try:
-            conn = psycopg2.connect(dbname="dc97213o4m7k5p", user="vktqphxyullurz", password="144c8c9e523fd6a3061d83559e3ffee9a7f78e4e83f7932f44000204b82fee9e", host="ec2-34-239-81-70.compute-1.amazonaws.com")
+            conn = psycopg2.connect(dbname="d8e3b1c4anp49e", user="xoyrvlttghwzit", password="510506114c54b4ea19e8d481bb4205f2ef0e11c6b4acb86f8f3e70daf3a7969e", host="ec2-44-207-133-100.compute-1.amazonaws.com")
             cur = conn.cursor()
         except:
             print("Couldn't Connect!")
