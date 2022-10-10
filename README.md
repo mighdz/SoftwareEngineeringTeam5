@@ -12,19 +12,23 @@
 
 # First, you need to make sure you have Git installed. 
 To check if it is installed on Mac. Simply do: 
-$ git --version
+```$ git --version
 If it is not installed, you will be prompted to install. 
+```
 
 To install on Linux: 
+```
 $ sudo dnf install git-all
+```
 
 To install on Windows: 
 Download from the following website: 
 https://git-scm.com/download/win 
 
 #Once Git is installed, you are ready to download Heroku. 
-On Mac, simply do: 
+```On Mac, simply do: 
 $ brew tap heroku/brew && brew install heroku
+```
 
 On Windows, click the following link for 64-bit: 
 https://cli-assets.heroku.com/heroku-x64.exe 
@@ -33,8 +37,8 @@ For 32-bit click here:
 https://cli-assets.heroku.com/heroku-x86.exe
 
 Verify your installation with: 
-$ heroku --version
-
+```$ heroku --version
+```
 # To run our Laser-Tag project
 ```python 
 To ensure our project runs correct, you must not have any previous data from heroku
