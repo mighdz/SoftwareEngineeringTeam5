@@ -10,25 +10,41 @@
 5. Keith Mussino
 6. Dylan Vaughn
 
-# To run our Laser-Tag project
-```python 
-To ensure our project runs correct, you must not have any previous data from heroku
-To start, you must use our heroku credentials:
-$ Heroku login
-Enter this command for psql:
-$ heroku pg:psql -a team101
-Press spacebar to move onto the player entry screen. 
-This project can now run.
+# First, you need to make sure you have Git installed. 
+To check if it is installed on Mac. Simply do: 
+```
+$ git --version
+```
+If it is not installed, you will be prompted to install. 
+
+
+To install on Linux: 
+```
+$ sudo dnf install git-all
 ```
 
-# To install Flask 
-```python
-pip install Flask
-Note: If 'pip' does not work, try 'pip3'
+To install on Windows: 
+Download from the following website: 
+https://git-scm.com/download/win 
+
+# Once Git is installed, you are ready to download Heroku. 
+On Mac, simply do: 
+```
+$ brew tap heroku/brew && brew install heroku
 ```
 
-# Installing PSQL for MAC
-```python
+On Windows, click the following link for 64-bit: 
+https://cli-assets.heroku.com/heroku-x64.exe 
+
+For 32-bit click here:
+https://cli-assets.heroku.com/heroku-x86.exe
+
+Verify your installation with: 
+```
+$ heroku --version
+```
+# Installing PSQL for Mac and Windows 
+```
 For Mac:
 $brew install postgresql
 
@@ -40,6 +56,23 @@ You can verify access via the Command Prompt using the following command:
 psql -V
 If that doesn’t work then you will need to update your system’s PATH variable and then restart your Command Prompt
 Add an entry similar to [C:\Program Files\PostgreSQL12\bin\]
+```
+
+# To install Flask 
+```
+pip install Flask
+Note: If 'pip' does not work, try 'pip3'
+```
+
+# To run our Laser-Tag project
+``` 
+To ensure our project runs correct, you must not have any previous data from heroku
+To start, you must use our heroku credentials:
+$ Heroku login
+Enter this command for psql:
+$ heroku pg:psql -a team101
+Press spacebar to move onto the player entry screen. 
+This project can now run.
 ```
 
 # Kill Command
