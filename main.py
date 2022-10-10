@@ -14,7 +14,7 @@ def entryScreen():
 def home():
     return render_template("EntryScreen.html")
 
-@app.route("/link", methods = ['POST'])
+@app.route('/submit', methods = ['POST'])
 def enterPlayers():
 
     playerInformation = []

@@ -12,8 +12,8 @@ class Heroku():
         self.codeName = codename
 
         try:
-            herokuConnect = psycopg2.connect(dbname="dc97213o4m7k5p", user="vktqphxyullurz", password="144c8c9e523fd6a3061d83559e3ffee9a7f78e4e83f7932f44000204b82fee9e", host="ec2-34-239-81-70.compute-1.amazonaws.com")
-            herokuCursor = herokuConnect.cursor()
+            conn = psycopg2.connect(dbname="dc97213o4m7k5p", user="vktqphxyullurz", password="144c8c9e523fd6a3061d83559e3ffee9a7f78e4e83f7932f44000204b82fee9e", host="ec2-34-239-81-70.compute-1.amazonaws.com")
+            cur = conn.cursor()
         except:
             print("Couldn't Connect!")
 
@@ -21,9 +21,9 @@ class Heroku():
         playerValues = (self.id, self.firstName, self.lastName, self.codeName)
 
         try:
-            herokuCursor.execute(sqlInsert, playerValues)
-            herokuConnect.commit()
+            cur.execute(sqlInsert, playerValues)
+            conn.commit()
         except:
             print("Couldn't Add Player!")
 
-        herokuConnect.close()
+        conn.close()
