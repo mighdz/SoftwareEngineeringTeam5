@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Entry Terminal</title>
+	</head>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		.box1 { 
+			width: 250px; 
+			height: 22px; 
+			background: dimgray;
+			padding: 3px;			
+		}
+		
+		.box2 { 
+			width: 110px; 
+			height: 90px; 
+			border: 1px solid lightgray;
+			text-align:center;
+			padding: 3px;
+		}
+		
+		.box3 {  
+			height: 25px;
+			text-align:center;
+			background: lightgray; 
+			padding: 3px
+		}
+		
+		.column {
+			float: left;
+			width: 50%;
+			padding: 3px;
+		}
+		
+		.column2 {
+			float: left;
+			width: 8.33%;
+			padding: 3px;
+		}
+		
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+	</style>
+	<body style="background-color:black"
+	
+		<!-- Header -->
+		<h1 style="text-align:center;color:white">Edit Current Game</h1>
+		
+		<!-- Team Names, Red Player 1 and Green Player 1 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<!-- Red Team Name -->
+					<h2 style="color:white">Red Team</h2>
+					
+					<label for="red1" style="font-size:115%;color:white"> 1: </label>
+					<input type="text" id="red1id" name="red1id" size="20" style="font-size:115%">
+					<input type="text" id="red1name" name="red1name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<!-- Green Team Name -->
+					<h2 style="color:white">Green Team</h2>
+					
+					<label for="green1" style="font-size:115%;color:white">1: </label>
+					<input type="text" id="green1id" name="green1id" size="20" style="font-size:115%">
+					<input type="text" id="green1name" name="green1name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 2 and Green Player 2 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red2" style="font-size:115%;color:white">2: </label>
+					<input type="text" id="red2id" name="red2id" size="20" style="font-size:115%">
+					<input type="text" id="red2name" name="red2name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green2" style="font-size:115%;color:white"> 2: </label>
+					<input type="text" id="green2id" name="green2id" size="20" style="font-size:115%">
+					<input type="text" id="green2name" name="green1name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 3 and Green Player 3 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red3" style="font-size:115%;color:white">3: </label>
+					<input type="text" id="red3id" name="red3id" size="20" style="font-size:115%">
+					<input type="text" id="red3name" name="red3name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green3" style="font-size:115%;color:white">3: </label>
+					<input type="text" id="green3id" name="green3id" size="20" style="font-size:115%">
+					<input type="text" id="green3name" name="green3name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 4 and Green Player 4 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red4" style="font-size:115%;color:white">4: </label>
+					<input type="text" id="red4id" name="red4id" size="20" style="font-size:115%">
+					<input type="text" id="red4name" name="red4name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green4" style="font-size:115%;color:white">4: </label>
+					<input type="text" id="green4id" name="green4id" size="20" style="font-size:115%">
+					<input type="text" id="green4name" name="green4name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 5 and Green Player 5 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red5" style="font-size:115%;color:white">5: </label>
+					<input type="text" id="red5id" name="red5id" size="20" style="font-size:115%">
+					<input type="text" id="red5name" name="red5name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green5" style="font-size:115%;color:white">5: </label>
+					<input type="text" id="green5id" name="green5id" size="20" style="font-size:115%">
+					<input type="text" id="green5name" name="green5name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+	
+		<!-- Red Player 6 and Green Player 6 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red6" style="font-size:115%;color:white">6: </label>
+					<input type="text" id="red6id" name="red6id" size="20" style="font-size:115%">
+					<input type="text" id="red6name" name="red6name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green6" style="font-size:115%;color:white">6: </label>
+					<input type="text" id="green6id" name="green6id" size="20" style="font-size:115%">
+					<input type="text" id="green6name" name="green6name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 7 and Green Player 7 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red7" style="font-size:115%;color:white">7: </label>
+					<input type="text" id="red7id" name="red7id" size="20" style="font-size:115%">
+					<input type="text" id="red7name" name="red7name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green7" style="font-size:115%;color:white">7: </label>
+					<input type="text" id="green7id" name="green7id" size="20" style="font-size:115%">
+					<input type="text" id="green7name" name="green7name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+	
+		<!-- Red Player 8 and Green Player 8 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red8" style="font-size:115%;color:white">8: </label>
+					<input type="text" id="red8id" name="red8id" size="20" style="font-size:115%">
+					<input type="text" id="red8name" name="red8name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green8" style="font-size:115%;color:white">8: </label>
+					<input type="text" id="green8id" name="green8id" size="20" style="font-size:115%">
+					<input type="text" id="green8name" name="green8name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+	
+		<!-- Red Player 9 and Green Player 9 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red9" style="font-size:115%;color:white">9: </label>
+					<input type="text" id="red9id" name="red9id" size="20" style="font-size:115%">
+					<input type="text" id="red9name" name="red9name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green9" style="font-size:115%;color:white">9: </label>
+					<input type="text" id="green9id" name="green9id" size="20" style="font-size:115%">
+					<input type="text" id="green9name" name="green9name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+	
+		<!-- Red Player 10 and Green Player 10 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red10" style="font-size:115%;color:white">10: </label>
+					<input type="text" id="red10id" name="red10id" size="20" style="font-size:115%">
+					<input type="text" id="red10name" name="red10name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green10" style="font-size:115%;color:white">10: </label>
+					<input type="text" id="green10id" name="green10id" size="20" style="font-size:115%">
+					<input type="text" id="green10name" name="green10name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 11 and Green Player 11 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red11" style="font-size:115%;color:white">11: </label>
+					<input type="text" id="red11id" name="red11id" size="20" style="font-size:115%">
+					<input type="text" id="red11name" name="red11name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green11" style="font-size:115%;color:white">11: </label>
+					<input type="text" id="green11id" name="green11id" size="20" style="font-size:115%">
+					<input type="text" id="green11name" name="green11name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 12 and Green Player 12 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red12" style="font-size:115%;color:white">12: </label>
+					<input type="text" id="red12id" name="red12id" size="20" style="font-size:115%">
+					<input type="text" id="red12name" name="red12name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green12" style="font-size:115%;color:white">12: </label>
+					<input type="text" id="green12id" name="green12id" size="20" style="font-size:115%">
+					<input type="text" id="green12name" name="green12name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 13 and Green Player 13 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red13" style="font-size:115%;color:white">13: </label>
+					<input type="text" id="red13id" name="red13id" size="20" style="font-size:115%">
+					<input type="text" id="red13name" name="red13name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green13" style="font-size:115%;color:white">13: </label>
+					<input type="text" id="green13id" name="green13id" size="20" style="font-size:115%">
+					<input type="text" id="green13name" name="green13name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 14 and Green Player 14 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red14" style="font-size:115%;color:white">14: </label>
+					<input type="text" id="red14id" name="red14id" size="20" style="font-size:115%">
+					<input type="text" id="red14name" name="red14name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green14" style="font-size:115%;color:white">14: </label>
+					<input type="text" id="green14id" name="green14id" size="20" style="font-size:115%">
+					<input type="text" id="green14name" name="green14name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Red Player 15 and Green Player 15 -->
+		<div class="row">
+			<div class="column" style="background-color:firebrick">
+				<center>
+					
+					<label for="red1" style="font-size:115%;color:white">15: </label>
+					<input type="text" id="red15id" name="red15id" size="20" style="font-size:115%">
+					<input type="text" id="red15name" name="red15name" size="30" style="font-size:115%">
+					
+					
+				</center>
+			</div>
+			
+			<div class="column" style="background-color:seagreen">
+				<center>
+					
+					<label for="green15" style="font-size:115%;color:white">15: </label>
+					<input type="text" id="green15id" name="green15id" size="20" style="font-size:115%">
+					<input type="text" id="green15name" name="green15name" size="30" style="font-size:115%">
+					
+				</center>
+			</div>
+		</div>
+		
+		<!-- Game Mode -->
+		<center>
+				<div class="box1" style="font-size:90%;color:white">Game Mode: Standard public mode</div>
+		</center>
+		
+		<!-- Buttons -->
+		<div class="row">
+		
+			<!-- F1 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F1 <br> Edit <br> Game</div>
+			</div>
+			
+			<!-- F2 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F2 <br> Game <br> Parameters</div>
+			</div>
+			
+			<!-- F3 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F3 <br> Start <br> Game</div>
+			</div>
+			
+			<!-- F4 -->
+			<div class="column2">
+				
+			</div>
+			
+			<!-- F5 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F5 <br> PreEntered <br> Games</div>
+			</div>
+			
+			<!-- F6 -->
+			<div class="column2">
+				
+			</div>
+			
+			<!-- F7 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F7</div>
+			</div>
+			
+			<!-- F8 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F8 <br> View <br> Game</div>
+			</div>
+			
+			<!-- F9 -->
+			<div class="column2">
+				
+			</div>
+			
+			<!-- F10 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F10 <br> Flick <br> Sync</div>
+			</div>
+			
+			<!-- F11 -->
+			<div class="column2">
+				
+			</div>
+			
+			<!-- F12 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F12 <br> Clear <br> Game</div>
+			</div>
+			
+		</div>
+		
+		<!-- Bottom Note -->
+		<div class="box3">&lt;Del&gt; to Delete Player, &lt;Ins&gt; to Manually Insert, or edit codename</div>
+		
+	</body>
+</html>
