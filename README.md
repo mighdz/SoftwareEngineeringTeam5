@@ -31,7 +31,6 @@ https://git-scm.com/download/win
 On Mac, simply do: 
 ```
 $ brew tap heroku/brew && brew install heroku
-
 ```
 
 On Windows, click the following link for 64-bit: 
@@ -45,7 +44,7 @@ Verify your installation with:
 $ heroku --version
 ```
 # To run our Laser-Tag project
-```python 
+``` 
 To ensure our project runs correct, you must not have any previous data from heroku
 To start, you must use our heroku credentials:
 $ Heroku login
@@ -56,13 +55,13 @@ This project can now run.
 ```
 
 # To install Flask 
-```python
+```
 pip install Flask
 Note: If 'pip' does not work, try 'pip3'
 ```
 
 # Installing PSQL for MAC
-```python
+```
 For Mac:
 $brew install postgresql
 
