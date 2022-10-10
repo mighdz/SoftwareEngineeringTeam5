@@ -12,7 +12,8 @@
 
 # First, you need to make sure you have Git installed. 
 To check if it is installed on Mac. Simply do: 
-$ git --version
+```$ git --version
+```
 If it is not installed, you will be prompted to install. 
 
 
@@ -26,8 +27,8 @@ Download from the following website:
 https://git-scm.com/download/win 
 
 #Once Git is installed, you are ready to download Heroku. 
-```On Mac, simply do: 
-$ brew tap heroku/brew && brew install heroku
+On Mac, simply do: 
+```$ brew tap heroku/brew && brew install heroku
 ```
 
 On Windows, click the following link for 64-bit: 
