@@ -29,7 +29,9 @@ https://git-scm.com/download/win
 
 #Once Git is installed, you are ready to download Heroku. 
 On Mac, simply do: 
-```$ brew tap heroku/brew && brew install heroku
+```
+$ brew tap heroku/brew && brew install heroku
+
 ```
 
 On Windows, click the following link for 64-bit: 
