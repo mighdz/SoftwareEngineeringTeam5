@@ -12,7 +12,8 @@
 
 # First, you need to make sure you have Git installed. 
 To check if it is installed on Mac. Simply do: 
-```$ git --version
+```
+$ git --version
 ```
 If it is not installed, you will be prompted to install. 
 
