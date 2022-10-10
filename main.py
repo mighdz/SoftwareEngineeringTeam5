@@ -28,16 +28,16 @@ def enterPlayers():
                 playerInformation.append(j)
         
         id = playerData["red1ID"]
-        firstName = playerData["red1fname"]
-        lastName = playerData["red1lname"]
-        codename = playerData["red1code"]
+        firstName = playerData["red1FirstName"]
+        lastName = playerData["red1LastName"]
+        codename = playerData["red1CodeName"]
 
         herokudb.playerAdd(id,firstName,lastName,codename)
 
         id = playerData["green1ID"]
-        firstName = playerData["green1fname"]
-        lastName = playerData["green1lname"]
-        codename = playerData["green1code"]
+        firstName = playerData["green1FirstName"]
+        lastName = playerData["green1LastName"]
+        codename = playerData["green1CodeName"]
 
         herokudb.playerAdd(id,firstName,lastName,codename)
 
