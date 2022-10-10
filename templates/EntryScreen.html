@@ -515,9 +515,131 @@
 			</div>
 			
 		</div>
-		
 		<!-- Bottom Note -->
 		<div class="box3">&lt;Del&gt; to Delete Player, &lt;Ins&gt; to Manually Insert, or edit codename</div>
-		
+		<script>
+		window.addEventListener('keydown', function (event) {
+
+		// if the keyCode is 13 ( enter key was pressed )
+		if (event.keyCode === 13) {
+
+			// prevents default behaviour
+			playerAdd(this.form);
+
+			return false;
+		}
+			function playerAdd(form){
+				var red1ID = 1;
+				var red1FirstName = form.red1fname.value;
+				var red1LastName = form.red1lname.value;
+				var red1CodeName = form.red1code.value;
+
+				var green1ID = 16;
+				var green1FirstName = form.green1fname.value;
+				var green1LastName = form.green1lname.value;
+				var green1CodeName = form.green1code.value;
+
+				var red2ID = 2;
+				var red2FirstName = form.red2fname.value;
+				var red2LastName = form.red2lname.value;
+				var red2CodeName = form.red2code.value;
+
+				var green2ID = 17;
+				var green2FirstName = form.green2fname.value;
+				var green2LastName = form.green2lname.value;
+				var green2CodeName = form.green2code.value;
+
+				var red3ID = 3;
+				var red3FirstName = form.red3fname.value;
+				var red3LastName = form.red3lname.value;
+				var red3CodeName = form.red3code.value;
+
+				var green3ID = 18;
+				var green3FirstName = form.green3fname.value;
+				var green3LastName = form.green3lname.value;
+				var green3CodeName = form.green3code.value;
+
+				var red4ID = 4;
+				var red4FirstName = form.red4fname.value;
+				var red4LastName = form.red4lname.value;
+				var red4CodeName = form.red4code.value;
+
+				var green4ID = 19;
+				var green4FirstName = form.green4fname.value;
+				var green4LastName = form.green4lname.value;
+				var green4CodeName = form.green4code.value;
+
+				var red1 = {
+					red1ID : red1ID,
+					red1FirstName : red1FirstName,
+					red1LastName : red1LastName,
+					red1CodeName : red1CodeName
+				};
+
+				var green1 = {
+					green1ID : green1ID,
+					green1FirstName : green1FirstName,
+					green1LastName : green1LastName,
+					green1CodeName : green1CodeName
+				};
+
+				var red2 = {
+					red2ID : red2ID,
+					red2FirstName : red2FirstName,
+					red2LastName : red2LastName,
+					red2CodeName : red2CodeName
+				};
+
+				var green2 = {
+					green2ID : green2ID,
+					green2FirstName : green2FirstName,
+					green2LastName : green2LastName,
+					green2CodeName : green2CodeName
+				};
+
+				var red3 = {
+					red3ID : red3ID,
+					red3FirstName : red3FirstName,
+					red3LastName : red3LastName,
+					red3CodeName : red3CodeName
+				};
+
+				var green3 = {
+					green3ID : green3ID,
+					green3FirstName : green3FirstName,
+					green3LastName : green3LastName,
+					green3CodeName : green3CodeName
+				};
+
+				var red4 = {
+					red4ID : red4ID,
+					red4FirstName : red4FirstName,
+					red4LastName : red4LastName,
+					red4CodeName : red4CodeName
+				};
+
+				var green4 = {
+					green4ID : green4ID,
+					green4FirstName : green4FirstName,
+					green4LastName : green4LastName,
+					green4CodeName : green4CodeName
+				};
+
+				var players = Object.assign({}, red1, green1, red2, green2, red3, green3, red4, green4);
+
+				test = new XMLHttpRequest();
+			
+				test.open('POST', '/link', true);
+
+				test.onload = function(){
+					var sendData = JSON.parse(this.responseText);
+				};
+
+				sendData = JSON.stringify(players);
+				test.send(sendData);
+				
+				window.location.replace('http://127.0.0.1:5000/game');
+			}
+	</script>
 	</body>
 </html>
