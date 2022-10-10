@@ -43,7 +43,7 @@ Verify your installation with:
 ```
 $ heroku --version
 ```
-# Installing PSQL for MAC
+# Installing PSQL for Mac and Windows 
 ```
 For Mac:
 $brew install postgresql
