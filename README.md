@@ -43,23 +43,6 @@ Verify your installation with:
 ```
 $ heroku --version
 ```
-# To run our Laser-Tag project
-``` 
-To ensure our project runs correct, you must not have any previous data from heroku
-To start, you must use our heroku credentials:
-$ Heroku login
-Enter this command for psql:
-$ heroku pg:psql -a team101
-Press spacebar to move onto the player entry screen. 
-This project can now run.
-```
-
-# To install Flask 
-```
-pip install Flask
-Note: If 'pip' does not work, try 'pip3'
-```
-
 # Installing PSQL for MAC
 ```
 For Mac:
@@ -73,6 +56,23 @@ You can verify access via the Command Prompt using the following command:
 psql -V
 If that doesn’t work then you will need to update your system’s PATH variable and then restart your Command Prompt
 Add an entry similar to [C:\Program Files\PostgreSQL12\bin\]
+```
+
+# To install Flask 
+```
+pip install Flask
+Note: If 'pip' does not work, try 'pip3'
+```
+
+# To run our Laser-Tag project
+``` 
+To ensure our project runs correct, you must not have any previous data from heroku
+To start, you must use our heroku credentials:
+$ Heroku login
+Enter this command for psql:
+$ heroku pg:psql -a team101
+Press spacebar to move onto the player entry screen. 
+This project can now run.
 ```
 
 # Kill Command
