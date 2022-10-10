@@ -519,17 +519,6 @@
 		<!-- Bottom Note -->
 		<div class="box3">&lt;Del&gt; to Delete Player, &lt;Ins&gt; to Manually Insert, or edit codename</div>
 		<script>
-		window.addEventListener('keydown', function (event) {
-
-		// if the keyCode is 13 ( enter key was pressed )
-		if (event.keyCode === 13) {
-
-			// prevents default behaviour
-			playerAdd(this.form);
-
-			return false;
-		}
-		});
 			function playerAdd(form){
 				var red1ID = 1;
 				var red1FirstName = form.red1fname.value;

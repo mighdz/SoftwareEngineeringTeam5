@@ -16,12 +16,12 @@ def home():
 
 @app.route("/link", methods = ['POST'])
 def enterPlayers():
-    
+
     playerInformation = []
 
     if request.method == 'POST':
 
-        playerData = request.get_json(force = True)
+        playerData = request.get_json(force=True)
         for i in playerData.keys():
             for j in playerData.values():
                 playerInformation.append(i)
