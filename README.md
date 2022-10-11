@@ -69,10 +69,28 @@ Note: If 'pip' does not work, try 'pip3'
 To ensure our project runs correct, you must not have any previous data from heroku
 To start, you must use our heroku credentials:
 $ Heroku login
+
+To get into the project folder:
+$ cd (project folder path)
+
+For Windows:
+$ set FLASK_APP=main
+$ python -m flask run
+
+For Mac:
+$ export FLASK_APP=main
+$ flask run
+
+This starts up a local server, that is being run on http://127.0.0.1:5000
+Follow this link, then whenever the splash screen shows, press spacebar to move onto the player entry screen.
+```
+
 Enter this command for psql:
 $ heroku pg:psql -a team101
-Press spacebar to move onto the player entry screen. 
-This project can now run.
+Enter this command to view the database:
+$ select * from player;
+Enter this command to clear the database:
+$ delete from player;
 ```
 
 # Kill Command
