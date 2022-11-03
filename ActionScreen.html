@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" id = "next";>
+	<head>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<title>Game Action Screen</title>
+	</head>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		.box1 {
+			border-radius: 25px;
+			height: 300px; 
+			border: 2px solid lightgray;
+			padding: 3px;			
+		}
+		
+		.box2 { 
+			width: 110px; 
+			height: 85px; 
+			border: 1px solid lightgray;
+			text-align:center;
+			padding: 3px;
+		}
+		
+		.box3 {
+			border-radius: 25px;
+			height: 300px; 
+			border: 2px solid lightgray;
+			background: dimgray;
+			padding: 3px;			
+		}
+		
+		.column {
+			float: left;
+			width: 50%;
+			padding: 3px;
+		}
+		
+		.column2 {
+			float: left;
+			width: 8.33%;
+			padding: 3px;
+		}
+		
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+		
+		h2 {
+			padding: 5px;
+			margin: 0px;
+		}
+		
+		h3 {
+			padding: 5px;
+			margin: 0px;
+		}
+	</style>
+	<body style="background-color:black">
+		
+		<!-- Scores Header -->
+		<div class ="row">
+			<h2 style="color:white"> &emsp; Current Scores </h1>
+		</div>
+		
+		<!-- Scores Box -->
+		<div class="box1" style="color:white">
+			<div class ="row">
+			
+				<div class="column">
+					<center>
+					
+					<!-- Red Team Name -->
+					<h2>RED TEAM</h2>
+					
+					</center>
+				</div>
+				
+				<div class="column">
+					<center>
+					
+					<!-- Green Team Name -->
+					<h2>GREEN TEAM</h2>
+					
+					</center>
+				</div>
+				
+			</div>
+			
+			<div class ="row" style="font-size:115%">
+			
+				<div class="column" style="color:firebrick">
+				
+					<div class="column" style="text-align:center">
+					<!-- Red Player 1 -->
+					<h3>Red Player 1</h3>
+					
+					<!-- Red Player 2
+					<h3>Red Player 2</h3> -->
+					
+					<!-- Add Remaining Players -->
+					</div>
+					
+					<div class="column" style="text-align:center">
+					<!-- Red Player 1 Score -->
+					<h3>0000</h3>
+					
+					<!-- Red Player 2 Score
+					<h3>0000</h3> -->
+					
+					<!-- Add Remaining Player Scores -->
+					</div>
+					
+				</div>
+				
+				<div class="column" style="color:seagreen">
+					
+					<div class="column" style="text-align:center">
+					<!-- Green Player 1 -->
+					<h3>Green Player 1</h3>
+					
+					</div>
+					
+					<div class="column" style="text-align:center">
+					<!-- Green Player 1 Score -->
+					<h3>0000</h3>
+					
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- Action Header -->
+		<div class ="row">
+			<h2 style="color:white"> &emsp; Current Game Action </h1>
+		</div>
+		
+		<!-- Action Box -->
+		<div class="box3" style="color:white">
+		
+		</div>
+			
+		<!-- Buttons -->
+		<div class="row">
+		
+			<!-- F1 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F1 <br> Edit <br> Game</div>
+			</div>
+			
+			<!-- F2 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F2 <br> Game <br> Parameters</div>
+			</div>
+			
+			<!-- F3 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F3 <br> PreEntered <br> Games</div>
+			</div>
+			
+			<!-- F4 -->
+			<div class="column2">
+				
+			</div>
+			
+			<!-- F5 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F5 <br> Start <br> Game</div>
+			</div>
+			
+			<!-- F6 -->
+			<div class="column2">
+				
+			</div>
+			
+			<!-- F7 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F7</div>
+			</div>
+			
+			<!-- F8 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F8 <br> View <br> Game</div>
+			</div>
+			
+			<!-- F9 -->
+			<div class="column2">
+				
+			</div>
+			
+			<!-- F10 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F10 <br> Flick <br> Sync</div>
+			</div>
+			
+			<!-- F11 -->
+			<div class="column2"> 
+				
+			</div>
+			
+			<!-- F12 -->
+			<div class="column2">
+				<div class="box2" style="font-size:90%;color:limegreen"><br>F12 <br> Clear <br> Game</div>
+			</div>
+			
+		</div>
+	
+	</body>
+	<script>
+			
+	</script>
+</html>
