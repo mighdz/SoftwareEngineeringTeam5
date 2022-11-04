@@ -747,13 +747,14 @@
 
 				var players = Object.assign({}, red1, red2, red3, red4, red5, red6, red7, red8, red9, red10, red11, red12, red13, red14, red15, green1, green2, green3, green4, green5, green6, green7, green8, green9, green10, green11, green12, green13, green14, green15);
 
-				connection = ne	 XMLHttpRequest();
+				connection = new XMLHttpRequest();
 			
 				connection.open('POST', '/submit', true);
 
 				connection.onload = function(){
 					var data = JSON.parse(this.responseText);
 				};
+
 				sendingData = JSON.stringify(players);
 				connection.send(sendingData);
 			}
