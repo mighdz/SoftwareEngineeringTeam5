@@ -60,6 +60,47 @@
 			margin: 0px;
 		}
 	</style>
+	<div class="btnGroup">
+        <span class="timer">
+          <span id="counter"></span>
+        </span>
+      </div>
+
+      <style>
+      	.btnGroup{
+      		color: white;
+      		text-align: center;
+      		font-size: 60px;
+      	}
+      </style>
+
+      <script>
+      	function countdown() {
+        var seconds = 60;
+        function tick() {
+          var counter = document.getElementById("counter");
+          seconds--;
+          counter.innerHTML =
+            "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+          if (seconds > 0) {
+            setTimeout(tick, 1000);
+          } else {
+            document.getElementById("verifiBtn").innerHTML = `
+                <div class="Btn" id="ResendBtn">
+                    <button type="submit">Resend</button>
+                </div>
+            `;
+            document.getElementById("counter").innerHTML = "";
+          }
+        }
+        tick();
+      }
+      countdown();
+
+      </script>
+	
+	
+	
 	<body style="background-color:black">
 		
 		<!-- Scores Header -->
