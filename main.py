@@ -43,5 +43,14 @@ def enterPlayers():
 
     return jsonify(playerValues)
 
+@app.route('/getPlayers', methods = ['GET'])
+def getPlayers():
+    if request.method == 'GET':
+        dictionary = hdb.getPlayers()
+
+        #Red1
+
+        
+
 if __name__ == '__main__':
     app.run(debug=True)
