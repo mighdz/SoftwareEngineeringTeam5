@@ -98,7 +98,20 @@
       countdown();
 
 	  setTimeout(function loadPlayers() {
-		#code shit!:
+		request = new XMLHttpRequest();
+
+		request.open('GET', '/getPlayers',true);
+
+		request.responseType = 'json';
+
+		request.send();
+
+		request.onload = function(){
+			let requestObj = request.response;
+
+			var red1ID = requestObj.red1ID;
+			document.getElementById('re1ID').innerHTML = red1ID;
+		}
 	  }, 10000);
 
       </script>
@@ -143,6 +156,22 @@
 					<div class="column" style="text-align:center">
 					<!-- Red Player 1 -->
 					<div id = 'red1ID' style="float:left"></div>
+					<div id = 'red1Code' style="float:left"></div><br>
+					<div id = 'red2ID' style="float:left"></div>
+					<div id = 'red3ID' style="float:left"></div>
+					<div id = 'red4ID' style="float:left"></div>
+					<div id = 'red5ID' style="float:left"></div>
+					<div id = 'red6ID' style="float:left"></div>
+					<div id = 'red7ID' style="float:left"></div>
+					<div id = 'red8ID' style="float:left"></div>
+					<div id = 'red9ID' style="float:left"></div>
+					<div id = 'red10ID' style="float:left"></div>
+					<div id = 'red11ID' style="float:left"></div>
+					<div id = 'red12ID' style="float:left"></div>
+					<div id = 'red13ID' style="float:left"></div>
+					<div id = 'red14ID' style="float:left"></div>
+					<div id = 'red15ID' style="float:left"></div>
+
 
 					
 					<!-- Red Player 2
