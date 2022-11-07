@@ -4,10 +4,8 @@ class HerokuConnect():
     def __init__(self):
         pass
 
-    def playerAdd(self, id, first_name, last_name, codename):
+    def playerAdd(self, id, codename):
         self.id = id
-        self.first_name = first_name
-        self.last_name = last_name
         self.codename = codename
 
         try:
@@ -16,8 +14,8 @@ class HerokuConnect():
         except:
             print("Couldn't Connect!")
 
-        sqlInsert = "INSERT INTO player (id, first_name, last_name, codename) VALUES (%s, %s, %s, %s)"
-        playerValues = (self.id, self.first_name, self.last_name, self.codename)
+        sqlInsert = "INSERT INTO player (id, codename) VALUES (%s, %s)"
+        playerValues = (self.id, self.codename)
 
         try:
             cur.execute(sqlInsert, playerValues)
