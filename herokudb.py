@@ -4,9 +4,9 @@ class HerokuConnect():
     def __init__(self):
         pass
 
-    def playerAdd(self, id, codename):
+    def playerAdd(self, id, Code):
         self.id = id
-        self.codename = codename
+        self.Code = Code
 
         try:
             conn = psycopg2.connect(dbname="d8e3b1c4anp49e", user="xoyrvlttghwzit", password="510506114c54b4ea19e8d481bb4205f2ef0e11c6b4acb86f8f3e70daf3a7969e", host="ec2-44-207-133-100.compute-1.amazonaws.com")
@@ -14,8 +14,8 @@ class HerokuConnect():
         except:
             print("Couldn't Connect!")
 
-        sqlInsert = "INSERT INTO player (id, codename) VALUES (%s, %s)"
-        playerValues = (self.id, self.codename)
+        sqlInsert = "INSERT INTO player (id, Code) VALUES (%s, %s)"
+        playerValues = (self.id, self.Code)
 
         try:
             cur.execute(sqlInsert, playerValues)
