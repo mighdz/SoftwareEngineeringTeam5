@@ -86,6 +86,7 @@ Follow this link, then whenever the splash screen shows, press spacebar to move 
 ```
 
 Enter this command for psql:
+```
 $ heroku pg:psql -a team101
 Enter this command to view the database:
 $ select * from player;
@@ -93,5 +94,12 @@ Enter this command to clear the database:
 $ delete from player;
 ```
 
-# Kill Command
+Changing screen instructions
+```
+Press 'F5' to change screens
+```
+
+Kill Command
+```
 (CTRL+C to kill)
+```
