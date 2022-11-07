@@ -156,7 +156,7 @@ def action_screen():
 @app.route('/getPlayers', methods = ['GET'])
 def getPlayers():
     if request.method == 'GET':
-        getStuff = hdb.getPlayers()
+        getStuff = hdb.playerGet()
 
         red1ID = getStuff[0][0]
         red1Code = getStuff[0][1]
@@ -309,8 +309,8 @@ def getPlayers():
             "green14Code" : green14Code,
             "green15ID" : green15ID,
             "green15Code" : green15Code,
-
         }   
+        return jsonify(dictionary)
 
 if __name__ == '__main__':
     app.run(debug=True)
