@@ -94,8 +94,12 @@ Enter this command to clear the database:
 $ delete from player;
 ```
 
-# Changing screen instructions
+Changing screen instructions
+```
 Press 'F5' to change screens
+```
 
-# Kill Command
+Kill Command
+```
 (CTRL+C to kill)
+```
