@@ -149,7 +149,7 @@ def enterPlayers():
 
     return jsonify(playerValues)
 
-@app.route('/ActionScreen', methods = ['GET'])
+@app.route('/ActionScreen')
 def action_screen():
     return render_template('ActionScreen.html')
 
@@ -157,159 +157,314 @@ def action_screen():
 def getPlayers():
     if request.method == 'GET':
         getStuff = hdb.playerGet()
+        dictionary = {}
+        try:
+            r1ID = getStuff[0][0]
+            r1Code = getStuff[0][1]
+            dictionary["red1ID"]=r1ID
+            dictionary["red1Code"]=r1Code
+        except IndexError:
+            print("No value here!")
 
-        red1ID = getStuff[0][0]
-        red1Code = getStuff[0][1]
+        try:
+            g1ID = getStuff[1][0]
+            g1Code = getStuff[1][1]
+            dictionary["green1ID"]=g1ID
+            dictionary["green1Code"]=g1Code
+        except IndexError:
+            print("No value here!")
 
-        red2ID = getStuff[2][0]
-        red2Code = getStuff[2][1]
+        try:
+            r2ID = getStuff[2][0]
+            r2Code = getStuff[2][1]
+            dictionary["red2ID"]=r2ID
+            dictionary["red2Code"]=r2Code
+        except IndexError:
+            print("No value here!")
 
-        red3ID = getStuff[4][0]
-        red3Code = getStuff[4][1]
+        try:
+            g2ID = getStuff[3][0]
+            g2Code = getStuff[3][1]
+            dictionary["green2ID"]=g2ID
+            dictionary["green2Code"]=g2Code
+        except IndexError:
+            print("No value here!")
 
-        red4ID = getStuff[6][0]
-        red4Code = getStuff[6][1]
+        try:
+            r3ID = getStuff[4][0]
+            r3Code = getStuff[4][1]
+            dictionary["red3ID"]=r3ID
+            dictionary["red3Code"]=r3Code
+        except IndexError:
+            print("No value here!")
 
-        red5ID = getStuff[8][0]
-        red5Code = getStuff[8][1]
+        try:
+            g3ID = getStuff[5][0]
+            g3Code = getStuff[5][1]
+            dictionary["green3ID"]=g3ID
+            dictionary["green3Code"]=g3Code
+        except IndexError:
+            print("No value here!")
 
-        red6ID = getStuff[10][0]
-        red6Code = getStuff[10][1]
+        try:
+            r4ID = getStuff[6][0]
+            r4Code = getStuff[6][1]
+            dictionary["red4ID"]=r4ID
+            dictionary["red4Code"]=r4Code
+        except IndexError:
+            print("No value here!")
 
-        red7ID = getStuff[12][0]
-        red7Code = getStuff[12][1]
+        try:
+            g4ID = getStuff[7][0]
+            g4Code = getStuff[7][1]
+            dictionary["green4ID"]=g4ID
+            dictionary["green4Code"]=g4Code
+        except IndexError:
+            print("No value here!")
 
-        red8ID = getStuff[14][0]
-        red8Code = getStuff[14][1]
+        try:
+            r5ID = getStuff[8][0]
+            r5Code = getStuff[8][1]
+            dictionary["red5ID"]=r5ID
+            dictionary["red5Code"]=r5Code
+        except IndexError:
+            print("No value here!")
 
-        red9ID = getStuff[16][0]
-        red9Code = getStuff[16][1]
+        try:
+            g5ID = getStuff[9][0]
+            g5Code = getStuff[9][1]
+            dictionary["green5ID"]=g5ID
+            dictionary["green5Code"]=g5Code
+        except IndexError:
+            print("No value here!")
 
-        red10ID = getStuff[18][0]
-        red10Code = getStuff[18][1]
+        try:
+            r6ID = getStuff[10][0]
+            r6Code = getStuff[10][1]
+            dictionary["red6ID"]=r6ID
+            dictionary["red6Code"]=r6Code
+        except IndexError:
+            print("No value here!")
 
-        red11ID = getStuff[20][0]
-        red11Code = getStuff[20][1]
+        try:
+            g6ID = getStuff[11][0]
+            g6Code = getStuff[11][1]
+            dictionary["green6ID"]=g6ID
+            dictionary["green6Code"]=g6Code
+        except IndexError:
+            print("No value here!")
 
-        red12ID = getStuff[22][0]
-        red12Code = getStuff[22][1]
+        try:
+            r7ID = getStuff[12][0]
+            r7Code = getStuff[12][1]
+            dictionary["red7ID"]=r7ID
+            dictionary["red7Code"]=r7Code
+        except IndexError:
+            print("No value here!")
 
-        red13ID = getStuff[24][0]
-        red13Code = getStuff[24][1]
+        try:
+            g7ID = getStuff[13][0]
+            g7Code = getStuff[13][1]
+            dictionary["green7ID"]=g7ID
+            dictionary["green7Code"]=g7Code
+        except IndexError:
+            print("No value here!")
 
-        red14ID = getStuff[26][0]
-        red14Code = getStuff[26][1]
+        try:
+            r8ID = getStuff[14][0]
+            r8Code = getStuff[14][1]
+            dictionary["red8ID"]=r8ID
+            dictionary["red8Code"]=r8Code
 
-        red15ID = getStuff[28][0]
-        red15Code = getStuff[28][1]
+        except IndexError:
+            print("No value here!")
 
-        green1ID = getStuff[1][0]
-        green1Code = getStuff[1][1]
+        try:
+            g8ID = getStuff[15][0]
+            g8Code = getStuff[15][1]
+            dictionary["green8ID"]=g8ID
+            dictionary["green8Code"]=g8Code
+        except IndexError:
+            print("No value here!")
 
-        green2ID = getStuff[3][0]
-        green2Code = getStuff[3][1]
+        try:
+            r9ID = getStuff[16][0]
+            r9Code = getStuff[16][1]
+            dictionary["red9ID"]=r9ID
+            dictionary["red9Code"]=r9Code
 
-        green3ID = getStuff[5][0]
-        green3Code = getStuff[5][1]
+        except IndexError:
+            print("No value here!")
 
-        green4ID = getStuff[7][0]
-        green4Code = getStuff[7][1]
+        try:
+            g9ID = getStuff[17][0]
+            g9Code = getStuff[17][1]
+            dictionary["green9ID"]=g9ID
+            dictionary["green9Code"]=g9Code
+        except IndexError:
+            print("No value here!")
 
-        green5ID = getStuff[9][0]
-        green5Code = getStuff[9][1]
+        try:
+            r10ID = getStuff[18][0]
+            r10Code = getStuff[18][1]
+            dictionary["red10ID"]=r10ID
+            dictionary["red10Code"]=r10Code
 
-        green6ID = getStuff[11][0]
-        green6Code = getStuff[11][1]
+        except IndexError:
+            print("No value here!")
 
-        green7ID = getStuff[13][0]
-        green7Code = getStuff[13][1]
+        try:
+            g10ID = getStuff[19][0]
+            g10Code = getStuff[19][1]
+            dictionary["green10ID"]=g10ID
+            dictionary["green10Code"]=g10Code
+        except IndexError:
+            print("No value here!")
 
-        green8ID = getStuff[15][0]
-        green8Code = getStuff[15][1]
+        try:
+            r11ID = getStuff[20][0]
+            r11Code = getStuff[20][1]
+            dictionary["red11ID"]=r11ID
+            dictionary["red11Code"]=r11Code
 
-        green9ID = getStuff[17][0]
-        green9Code = getStuff[17][1]
+        except IndexError:
+            print("No value here!")
 
-        green10ID = getStuff[19][0]
-        green10Code = getStuff[19][1]
+        try:
+            g11ID = getStuff[21][0]
+            g11Code = getStuff[21][1]
+            dictionary["green11ID"]=g11ID
+            dictionary["green11Code"]=g11Code
+        except IndexError:
+            print("No value here!")
 
-        green11ID = getStuff[21][0]
-        green11Code = getStuff[21][1]
+        try:
+            r12ID = getStuff[22][0]
+            r12Code = getStuff[22][1]
+            dictionary["red12ID"]=r12ID
+            dictionary["red12Code"]=r12Code
+        except IndexError:
+            print("No value here!")
 
-        green12ID = getStuff[23][0]
-        green12Code = getStuff[23][1]
+        try:
+            g12ID = getStuff[23][0]
+            g12Code = getStuff[23][1]
+            dictionary["green12ID"]=g12ID
+            dictionary["green12Code"]=g12Code
+        except IndexError:
+            print("No value here!")
 
-        green13ID = getStuff[25][0]
-        green13Code = getStuff[25][1]
+        try:
+            r13ID = getStuff[24][0]
+            r13Code = getStuff[24][1]
+            dictionary["red13ID"]=r13ID
+            dictionary["red13Code"]=r13Code
 
-        green14ID = getStuff[27][0]
-        green14Code = getStuff[27][1]
+        except IndexError:
+            print("No value here!")
 
-        green15ID = getStuff[29][0]
-        green15Code = getStuff[29][1]
+        try:
+            g13ID = getStuff[25][0]
+            g13Code = getStuff[25][1]
+            dictionary["green13ID"]=g13ID
+            dictionary["green13Code"]=g13Code
+        except IndexError:
+            print("No value here!")
 
-        dictionary = {
-            "red1ID" : red1ID,
-            "red1Code" : red1Code,
-            "red2ID" : red2ID,
-            "red2Code" : red2Code,
-            "red3ID" : red3ID,
-            "red3Code" : red3Code,
-            "red4ID" : red4ID,
-            "red4Code" : red4Code,
-            "red5ID" : red5ID,
-            "red5Code" : red5Code,
-            "red6ID" : red6ID,
-            "red6Code" : red6Code,
-            "red7ID" : red7ID,
-            "red7Code" : red7Code,
-            "red8ID" : red8ID,
-            "red8Code" : red8Code,
-            "red9ID" : red9ID,
-            "red9Code" : red9Code,
-            "red10ID" : red10ID,
-            "red10Code" : red10Code,
-            "red11ID" : red11ID,
-            "red11Code" : red11Code,
-            "red12ID" : red12ID,
-            "red12Code" : red12Code,
-            "red13ID" : red13ID,
-            "red13Code" : red13Code,
-            "red14ID" : red14ID,
-            "red14Code" : red14Code,
-            "red15ID" : red15ID,
-            "red15Code" : red15Code,
-            "green1ID" : green1ID,
-            "green1Code" : green1Code,
-            "green2ID" : green2ID,
-            "green2Code" : green2Code,
-            "green3ID" : green3ID,
-            "green3Code" : green3Code,
-            "green4ID" : green4ID,
-            "green4Code" : green4Code,
-            "green5ID" : green5ID,
-            "green5Code" : green5Code,
-            "green6ID" : green6ID,
-            "green6Code" : green6Code,
-            "green7ID" : green7ID,
-            "green7Code" : green7Code,
-            "green8ID" : green8ID,
-            "green8Code" : green8Code,
-            "green9ID" : green9ID,
-            "green9Code" : green9Code,
-            "green10ID" : green10ID,
-            "green10Code" : green10Code,
-            "green11ID" : green11ID,
-            "green11Code" : green11Code,
-            "green12ID" : green12ID,
-            "green12Code" : green12Code,
-            "green13ID" : green13ID,
-            "green13Code" : green13Code,
-            "green14ID" : green14ID,
-            "green14Code" : green14Code,
-            "green15ID" : green15ID,
-            "green15Code" : green15Code,
-        }   
+        try:
+            r14ID = getStuff[26][0]
+            r14Code = getStuff[26][1]
+            dictionary["red14ID"]=r14ID
+            dictionary["red14Code"]=r14Code
+        except IndexError:
+            print("No value here!")
+
+        try:
+            g14ID = getStuff[27][0]
+            g14Code = getStuff[27][1]
+            dictionary["green14ID"]=g14ID
+            dictionary["green14Code"]=g14Code
+        except IndexError:
+            print("No value here!")
+
+        try:
+            r15ID = getStuff[28][0]
+            r15Code = getStuff[28][1]
+            dictionary["red15ID"]=r15ID
+            dictionary["red15Code"]=r15Code
+        except IndexError:
+            print("No value here!")
+
+        try:
+            g15ID = getStuff[29][0]
+            g15Code = getStuff[29][1]
+            dictionary["green15ID"]=g15ID
+            dictionary["green15Code"]=g15Code
+        except IndexError:
+            print("No value here!")
+
+        # dictionary = {
+        #     "red1ID" : r1ID,
+        #     "red1Code" : r1Code,
+        #     "green1ID" : g1ID,
+        #     "green1Code" : g1Code,
+        #     "red2ID" : r2ID,
+        #     "red2Code" : r2Code,
+        #     "green2ID" : g2ID,
+        #     "green2Code" : g2Code,
+        #     "red3ID" : red3ID,
+        #     "red3Code" : red3Code,
+        #     "green3ID" : green3ID,
+        #     "green3Code" : green3Code,
+        #     "red4ID" : red4ID,
+        #     "red4Code" : red4Code,
+        #     "green4ID" : green4ID,
+        #     "green4Code" : green4Code,
+        #     "red5ID" : red5ID,
+        #     "red5Code" : red5Code,
+        #     "green5ID" : green5ID,
+        #     "green5Code" : green5Code,
+        #     "red6ID" : red6ID,
+        #     "red6Code" : red6Code,
+        #     "green6ID" : green6ID,
+        #     "green6Code" : green6Code,
+        #     "red7ID" : red7ID,
+        #     "red7Code" : red7Code,
+        #     "green7ID" : green7ID,
+        #     "green7Code" : green7Code,
+        #     "red8ID" : red8ID,
+        #     "red8Code" : red8Code,
+        #     "green8ID" : green8ID,
+        #     "green8Code" : green8Code,
+        #     "red9ID" : red9ID,
+        #     "red9Code" : red9Code,
+        #     "green9ID" : green9ID,
+        #     "green9Code" : green9Code,
+        #     "red10ID" : red10ID,
+        #     "red10Code" : red10Code,
+        #     "green10ID" : green10ID,
+        #     "green10Code" : green10Code,
+        #     "red11ID" : red11ID,
+        #     "red11Code" : red11Code,
+        #     "green11ID" : green11ID,
+        #     "green11Code" : green11Code,
+        #     "red12ID" : red12ID,
+        #     "red12Code" : red12Code,
+        #     "green12ID" : green12ID,
+        #     "green12Code" : green12Code,
+        #     "red13ID" : red13ID,
+        #     "red13Code" : red13Code,
+        #     "green13ID" : green13ID,
+        #     "green13Code" : green13Code,
+        #     "red14ID" : red14ID,
+        #     "red14Code" : red14Code,
+        #     "green14ID" : green14ID,
+        #     "green14Code" : green14Code,
+        #     "red15ID" : red15ID,
+        #     "red15Code" : red15Code,
+        #     "green15ID" : green15ID,
+        #     "green15Code" : green15Code,
+        # }   
         return jsonify(dictionary)
 
 if __name__ == '__main__':

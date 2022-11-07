@@ -17,11 +17,12 @@ class HerokuConnect():
         sqlInsert = "INSERT INTO player (id, Code) VALUES (%s, %s)"
         playerValues = (self.id, self.Code)
 
-        try:
-            cur.execute(sqlInsert, playerValues)
-            conn.commit()
-        except:
-            print("Couldn't Add Player!")
+        if self.id is not None:
+            try:
+                cur.execute(sqlInsert, playerValues)
+                conn.commit()
+            except:
+                print("Couldn't Add Player!")
 
         conn.close()
     
@@ -33,7 +34,7 @@ class HerokuConnect():
             print("Couldn't Connect to get!")
         
         try:
-            cur_get.execute("SELECT * FROM player;")
+            cur_get.execute("SELECT * FROM player")
             record = cur_get.fetchall()
         except:
             print("Get failed")
