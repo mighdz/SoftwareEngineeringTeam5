@@ -39,7 +39,7 @@ def enterPlayers():
 
     return jsonify(playerValues)
 
-@app.route('/getPlayers', methods = ['GET'])
+@app.route('/ActionScreen', methods = ['GET'])
 def getPlayers():
     if request.method == 'GET':
         dictionary = hdb.getPlayers()
