@@ -30,117 +30,117 @@ def enterPlayers():
         id = playerValues["red1ID"]
         Code = playerValues["red1Code"]
         hdb.playerAdd(id, Code)
+        
+        id = playerValues["green1ID"]
+        Code = playerValues["green1Code"]
+        hdb.playerAdd(id, Code)
 
         id = playerValues["red2ID"]
         Code = playerValues["red2Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red3ID"]
-        Code = playerValues["red3Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red4ID"]
-        Code = playerValues["red4Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red5ID"]
-        Code = playerValues["red5Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red6ID"]
-        Code = playerValues["red6Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red7ID"]
-        Code = playerValues["red7Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red8ID"]
-        Code = playerValues["red8Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red9ID"]
-        Code = playerValues["red9Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red10ID"]
-        Code = playerValues["red10Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red11ID"]
-        Code = playerValues["red11Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red12ID"]
-        Code = playerValues["red12Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red13ID"]
-        Code = playerValues["red13Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red14ID"]
-        Code = playerValues["red14Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["red15ID"]
-        Code = playerValues["red15Code"]
-        hdb.playerAdd(id, Code)
-
-        id = playerValues["green1ID"]
-        Code = playerValues["green1Code"]
         hdb.playerAdd(id, Code)
 
         id = playerValues["green2ID"]
         Code = playerValues["green2Code"]
         hdb.playerAdd(id, Code)
 
+        id = playerValues["red3ID"]
+        Code = playerValues["red3Code"]
+        hdb.playerAdd(id, Code)
+
         id = playerValues["green3ID"]
         Code = playerValues["green3Code"]
+        hdb.playerAdd(id, Code)
+
+        id = playerValues["red4ID"]
+        Code = playerValues["red4Code"]
         hdb.playerAdd(id, Code)
 
         id = playerValues["green4ID"]
         Code = playerValues["green4Code"]
         hdb.playerAdd(id, Code)
 
+        id = playerValues["red5ID"]
+        Code = playerValues["red5Code"]
+        hdb.playerAdd(id, Code)
+
         id = playerValues["green5ID"]
         Code = playerValues["green5Code"]
+        hdb.playerAdd(id, Code)
+
+        id = playerValues["red6ID"]
+        Code = playerValues["red6Code"]
         hdb.playerAdd(id, Code)
 
         id = playerValues["green6ID"]
         Code = playerValues["green6Code"]
         hdb.playerAdd(id, Code)
 
+        id = playerValues["red7ID"]
+        Code = playerValues["red7Code"]
+        hdb.playerAdd(id, Code)
+
         id = playerValues["green7ID"]
         Code = playerValues["green7Code"]
+        hdb.playerAdd(id, Code)
+
+        id = playerValues["red8ID"]
+        Code = playerValues["red8Code"]
         hdb.playerAdd(id, Code)
         
         id = playerValues["green8ID"]
         Code = playerValues["green8Code"]
         hdb.playerAdd(id, Code)
 
+        id = playerValues["red9ID"]
+        Code = playerValues["red9Code"]
+        hdb.playerAdd(id, Code)
+
         id = playerValues["green9ID"]
         Code = playerValues["green9Code"]
+        hdb.playerAdd(id, Code)
+
+        id = playerValues["red10ID"]
+        Code = playerValues["red10Code"]
         hdb.playerAdd(id, Code)
 
         id = playerValues["green10ID"]
         Code = playerValues["green10Code"]
         hdb.playerAdd(id, Code)
 
+        id = playerValues["red11ID"]
+        Code = playerValues["red11Code"]
+        hdb.playerAdd(id, Code)
+
         id = playerValues["green11ID"]
         Code = playerValues["green11Code"]
+        hdb.playerAdd(id, Code)
+
+        id = playerValues["red12ID"]
+        Code = playerValues["red12Code"]
         hdb.playerAdd(id, Code)
 
         id = playerValues["green12ID"]
         Code = playerValues["green12Code"]
         hdb.playerAdd(id, Code)
 
+        id = playerValues["red13ID"]
+        Code = playerValues["red13Code"]
+        hdb.playerAdd(id, Code)
+
         id = playerValues["green13ID"]
         Code = playerValues["green13Code"]
         hdb.playerAdd(id, Code)
 
+        id = playerValues["red14ID"]
+        Code = playerValues["red14Code"]
+        hdb.playerAdd(id, Code)
+
         id = playerValues["green14ID"]
         Code = playerValues["green14Code"]
+        hdb.playerAdd(id, Code)
+
+        id = playerValues["red15ID"]
+        Code = playerValues["red15Code"]
         hdb.playerAdd(id, Code)
 
         id = playerValues["green15ID"]
