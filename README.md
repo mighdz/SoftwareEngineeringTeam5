@@ -95,9 +95,7 @@ $ delete from player;
 ```
 
 # Changing screen instructions
-```
 Press 'F5' to change screens
-```
 
 # Kill Command
 (CTRL+C to kill)
