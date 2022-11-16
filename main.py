@@ -166,6 +166,36 @@ def action_screen():
 def getPlayers():
     if request.method == 'GET':
         getStuff = hdb.playerGet()
+        r1ID = -1
+        r2ID = -1
+        r3ID = -1
+        r4ID = -1
+        r5ID = -1
+        r6ID = -1
+        r7ID = -1
+        r8ID = -1
+        r9ID = -1
+        r10ID = -1
+        r11ID = -1
+        r12ID = -1
+        r13ID = -1
+        r14ID = -1
+        r15ID = -1
+        g1ID = -1
+        g2ID = -1
+        g3ID = -1
+        g4ID = -1
+        g5ID = -1
+        g6ID = -1
+        g7ID = -1
+        g8ID = -1
+        g9ID = -1
+        g10ID = -1
+        g11ID = -1
+        g12ID = -1
+        g13ID = -1
+        g14ID = -1
+        g15ID = -1
         dictionary = {}
         try:
             r1ID = getStuff[0][0]
@@ -417,7 +447,7 @@ def getPlayers():
         client_socket.sendto(bytesToSend, serverPort)
 
         s_msg = client_socket.recvfrom(1024)
-        msg = "{}".format(msg[0])
+        msg = "{}".format(s_msg[0])
 
         s_msg = client_socket.recvfrom(1024)
         redPoints = "{}".format(s_msg[0])
@@ -426,123 +456,123 @@ def getPlayers():
         greenPoints = "{}".format(s_msg[0])
 
         dictionaryWithPoints = {}
-        if bool(r1ID): 
+        if r1ID != -1: 
             dictionaryWithPoints["red1ID"]=r1ID
             dictionaryWithPoints["red1Code"]=r1Code
 
-        if bool(g1ID):
+        if g1ID != -1:
             dictionaryWithPoints["green1ID"]=g1ID
             dictionaryWithPoints["green1Code"]=g1Code
 
-        if bool(r2ID):
+        if r2ID != -1:
             dictionaryWithPoints["red2ID"]=r2ID
             dictionaryWithPoints["red2Code"]=r2Code
 
-        if bool(g2ID):
+        if g2ID != -1:
             dictionaryWithPoints["green2ID"]=g2ID
             dictionaryWithPoints["green2Code"]=g2Code
 
-        if bool(r3ID):
+        if r3ID != -1:
             dictionaryWithPoints["red3ID"]=r3ID
             dictionaryWithPoints["red3Code"]=r3Code
 
-        if bool(g3ID):
+        if g3ID != -1:
             dictionaryWithPoints["green3ID"]=g3ID
             dictionaryWithPoints["green3Code"]=g3Code
 
-        if bool(r4ID):
+        if r4ID != -1:
             dictionaryWithPoints["red4ID"]=r4ID
             dictionaryWithPoints["red4Code"]=r4Code
 
-        if bool(g4ID):
+        if g4ID != -1:
             dictionaryWithPoints["green4ID"]=g4ID
             dictionaryWithPoints["green4Code"]=g4Code
 
-        if bool(r5ID):
+        if r5ID != -1:
             dictionaryWithPoints["red5ID"]=r5ID
             dictionaryWithPoints["red5Code"]=r5Code
 
-        if bool(g5ID):
+        if g5ID != -1:
             dictionaryWithPoints["green5ID"]=g5ID
             dictionaryWithPoints["green5Code"]=g5Code
 
-        if bool(r6ID):
+        if r6ID != -1:
             dictionaryWithPoints["red6ID"]=r6ID
             dictionaryWithPoints["red6Code"]=r6Code
 
-        if bool(g6ID):
+        if g6ID != -1:
             dictionaryWithPoints["green6ID"]=g6ID
             dictionaryWithPoints["green6Code"]=g6Code
 
-        if bool(r7ID):
+        if r7ID != -1:
             dictionaryWithPoints["red7ID"]=r7ID
             dictionaryWithPoints["red7Code"]=r7Code
 
-        if bool(g7ID):
+        if g7ID != -1:
             dictionaryWithPoints["green7ID"]=g7ID
             dictionaryWithPoints["green7Code"]=g7Code
 
-        if bool(r8ID):
+        if r8ID != -1:
             dictionaryWithPoints["red8ID"]=r8ID
             dictionaryWithPoints["red8Code"]=r8Code
 
-        if bool(g8ID):
+        if g8ID != -1:
             dictionaryWithPoints["green8ID"]=g8ID
             dictionaryWithPoints["green8Code"]=g8Code
 
-        if bool(r9ID):
+        if r9ID != -1:
             dictionaryWithPoints["red9ID"]=r9ID
             dictionaryWithPoints["red9Code"]=r9Code
 
-        if bool(g9ID):
+        if g9ID != -1:
             dictionaryWithPoints["green9ID"]=g9ID
             dictionaryWithPoints["green9Code"]=g9Code
 
-        if bool(r10ID):
+        if r10ID != -1:
             dictionaryWithPoints["red10ID"]=r10ID
             dictionaryWithPoints["red10Code"]=r10Code
 
-        if bool(g10ID):
+        if g10ID != -1:
             dictionaryWithPoints["green10ID"]=g10ID
             dictionaryWithPoints["green10Code"]=g10Code
 
-        if bool(r11ID):
+        if r11ID != -1:
             dictionaryWithPoints["red11ID"]=r11ID
             dictionaryWithPoints["red11Code"]=r11Code
 
-        if bool(g11ID):
+        if g11ID != -1:
             dictionaryWithPoints["green11ID"]=g11ID
             dictionaryWithPoints["green11Code"]=g11Code
 
-        if bool(r12ID):
+        if r12ID != -1:
             dictionaryWithPoints["red12ID"]=r12ID
             dictionaryWithPoints["red12Code"]=r12Code
 
-        if bool(g12ID):
+        if g12ID != -1:
             dictionaryWithPoints["green12ID"]=g12ID
             dictionaryWithPoints["green12Code"]=g12Code
 
-        if bool(r13ID):
+        if r13ID != -1:
             dictionaryWithPoints["red13ID"]=r13ID
             dictionaryWithPoints["red13Code"]=r13Code
 
-        if bool(g13ID):
+        if g13ID != -1:
             dictionaryWithPoints["green13ID"]=g13ID
             dictionaryWithPoints["green13Code"]=g13Code
 
-        if bool(r14ID):
+        if r14ID != -1:
             dictionaryWithPoints["red14ID"]=r14ID
             dictionaryWithPoints["red14Code"]=r14Code
 
-        if bool(g14ID):
+        if g14ID != -1:
             dictionaryWithPoints["green14ID"]=g14ID
             dictionaryWithPoints["green14Code"]=g14Code
 
-        if bool(r15ID):
+        if r15ID != -1:
             dictionaryWithPoints["red15ID"]=r15ID
             dictionaryWithPoints["red15Code"]=r15Code
 
-        if bool(g15ID):
+        if g15ID != -1:
             dictionaryWithPoints["green15ID"]=g15ID
             dictionaryWithPoints["green15Code"]=g15Code
 

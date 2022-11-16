@@ -348,8 +348,26 @@
 			var green15Code = requestObj.green15Code;
 			if (green15Code != null)
 				document.getElementById('green15Code').innerHTML = green15Code;
+			
+				var ListOfEvents = requestObj.events;
+				tempLen = ListOfEvents.length;
+				ListOfEvents = ListOfEvents.slice(2);
+				ListOfEvents = ListOfEvents.substr(0, tempLen - 1);
+				events = ListOfEvents.split(",");
+				eventsLen = events.length;
+				console.log(events)
+
+				redPoints = requestObj.redPoints;
+				let redLen = redPoints.length;
+				redPoints = redPoints.substr(0, redLen - 1);
+				redPoints = redPoints.slice(2);
+
+				greenPoints = requestObj.greenPoints;
+				let greenLen = greenPoints.length;
+				greenPoints = greenPoints.substr(0, greenLen - 1);
+				greenPoints = greenPoints.slice(2);
 		}
-	  }, 5000);
+	  }, 10000);
 
       </script>
 	
