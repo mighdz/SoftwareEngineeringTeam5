@@ -13,7 +13,7 @@ hdb = HerokuConnect()
 
 serverPort = ("127.0.0.1", 65000)
 
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 @app.route("/")
 def entryScreen():
@@ -414,15 +414,15 @@ def getPlayers():
 
         c_msg = str(dictionary)
         bytesToSend = str.encode(c_msg)
-        sock.sendto(bytesToSend, serverPort)
+        client_socket.sendto(bytesToSend, serverPort)
 
-        s_msg = sock.recvfrom(1024)
+        s_msg = client_socket.recvfrom(1024)
         msg = "{}".format(msg[0])
 
-        s_msg = sock.recvfrom(1024)
+        s_msg = client_socket.recvfrom(1024)
         redPoints = "{}".format(s_msg[0])
 
-        s_msg = sock.recvfrom(1024)
+        s_msg = client_socket.recvfrom(1024)
         greenPoints = "{}".format(s_msg[0])
 
         dictionaryWithPoints = {}
