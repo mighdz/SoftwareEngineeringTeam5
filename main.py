@@ -1,10 +1,19 @@
+import socket
+import subprocess
 from flask import Flask, render_template, request, jsonify, json
 from herokudb import HerokuConnect
 
+
 app = Flask(__name__)
+
+subprocess.Popen(['python3', 'server.py'])
 
 #Declare class from herokudb.py
 hdb = HerokuConnect()
+
+serverPort = ("127.0.0.1", 65000)
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 @app.route("/")
 def entryScreen():
@@ -403,7 +412,144 @@ def getPlayers():
         except IndexError:
             print("No value here!")
 
-        return jsonify(dictionary)
+        c_msg = str(dictionary)
+        bytesToSend = str.encode(c_msg)
+        sock.sendto(bytesToSend, serverPort)
+
+        s_msg = sock.recvfrom(1024)
+        msg = "{}".format(msg[0])
+
+        s_msg = sock.recvfrom(1024)
+        redPoints = "{}".format(s_msg[0])
+
+        s_msg = sock.recvfrom(1024)
+        greenPoints = "{}".format(s_msg[0])
+
+        dictionaryWithPoints = {}
+        if bool(r1ID): 
+            dictionaryWithPoints["red1ID"]=r1ID
+            dictionaryWithPoints["red1Code"]=r1Code
+
+        if bool(g1ID):
+            dictionaryWithPoints["green1ID"]=g1ID
+            dictionaryWithPoints["green1Code"]=g1Code
+
+        if bool(r2ID):
+            dictionaryWithPoints["red2ID"]=r2ID
+            dictionaryWithPoints["red2Code"]=r2Code
+
+        if bool(g2ID):
+            dictionaryWithPoints["green2ID"]=g2ID
+            dictionaryWithPoints["green2Code"]=g2Code
+
+        if bool(r3ID):
+            dictionaryWithPoints["red3ID"]=r3ID
+            dictionaryWithPoints["red3Code"]=r3Code
+
+        if bool(g3ID):
+            dictionaryWithPoints["green3ID"]=g3ID
+            dictionaryWithPoints["green3Code"]=g3Code
+
+        if bool(r4ID):
+            dictionaryWithPoints["red4ID"]=r4ID
+            dictionaryWithPoints["red4Code"]=r4Code
+
+        if bool(g4ID):
+            dictionaryWithPoints["green4ID"]=g4ID
+            dictionaryWithPoints["green4Code"]=g4Code
+
+        if bool(r5ID):
+            dictionaryWithPoints["red5ID"]=r5ID
+            dictionaryWithPoints["red5Code"]=r5Code
+
+        if bool(g5ID):
+            dictionaryWithPoints["green5ID"]=g5ID
+            dictionaryWithPoints["green5Code"]=g5Code
+
+        if bool(r6ID):
+            dictionaryWithPoints["red6ID"]=r6ID
+            dictionaryWithPoints["red6Code"]=r6Code
+
+        if bool(g6ID):
+            dictionaryWithPoints["green6ID"]=g6ID
+            dictionaryWithPoints["green6Code"]=g6Code
+
+        if bool(r7ID):
+            dictionaryWithPoints["red7ID"]=r7ID
+            dictionaryWithPoints["red7Code"]=r7Code
+
+        if bool(g7ID):
+            dictionaryWithPoints["green7ID"]=g7ID
+            dictionaryWithPoints["green7Code"]=g7Code
+
+        if bool(r8ID):
+            dictionaryWithPoints["red8ID"]=r8ID
+            dictionaryWithPoints["red8Code"]=r8Code
+
+        if bool(g8ID):
+            dictionaryWithPoints["green8ID"]=g8ID
+            dictionaryWithPoints["green8Code"]=g8Code
+
+        if bool(r9ID):
+            dictionaryWithPoints["red9ID"]=r9ID
+            dictionaryWithPoints["red9Code"]=r9Code
+
+        if bool(g9ID):
+            dictionaryWithPoints["green9ID"]=g9ID
+            dictionaryWithPoints["green9Code"]=g9Code
+
+        if bool(r10ID):
+            dictionaryWithPoints["red10ID"]=r10ID
+            dictionaryWithPoints["red10Code"]=r10Code
+
+        if bool(g10ID):
+            dictionaryWithPoints["green10ID"]=g10ID
+            dictionaryWithPoints["green10Code"]=g10Code
+
+        if bool(r11ID):
+            dictionaryWithPoints["red11ID"]=r11ID
+            dictionaryWithPoints["red11Code"]=r11Code
+
+        if bool(g11ID):
+            dictionaryWithPoints["green11ID"]=g11ID
+            dictionaryWithPoints["green11Code"]=g11Code
+
+        if bool(r12ID):
+            dictionaryWithPoints["red12ID"]=r12ID
+            dictionaryWithPoints["red12Code"]=r12Code
+
+        if bool(g12ID):
+            dictionaryWithPoints["green12ID"]=g12ID
+            dictionaryWithPoints["green12Code"]=g12Code
+
+        if bool(r13ID):
+            dictionaryWithPoints["red13ID"]=r13ID
+            dictionaryWithPoints["red13Code"]=r13Code
+
+        if bool(g13ID):
+            dictionaryWithPoints["green13ID"]=g13ID
+            dictionaryWithPoints["green13Code"]=g13Code
+
+        if bool(r14ID):
+            dictionaryWithPoints["red14ID"]=r14ID
+            dictionaryWithPoints["red14Code"]=r14Code
+
+        if bool(g14ID):
+            dictionaryWithPoints["green14ID"]=g14ID
+            dictionaryWithPoints["green14Code"]=g14Code
+
+        if bool(r15ID):
+            dictionaryWithPoints["red15ID"]=r15ID
+            dictionaryWithPoints["red15Code"]=r15Code
+
+        if bool(g15ID):
+            dictionaryWithPoints["green15ID"]=g15ID
+            dictionaryWithPoints["green15Code"]=g15Code
+
+        dictionaryWithPoints["events"]=msg
+        dictionaryWithPoints["redPoints"]=redPoints
+        dictionaryWithPoints["greenPoints"]=greenPoints
+        return jsonify(dictionaryWithPoints)
 
 if __name__ == '__main__':
     app.run(debug=True)
