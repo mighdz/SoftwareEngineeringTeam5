@@ -6,14 +6,14 @@ from herokudb import HerokuConnect
 
 app = Flask(__name__)
 
-subprocess.Popen(['python3', 'server.py'])
+subprocess.Popen(['python', 'server.py'])
 
 #Declare class from herokudb.py
 hdb = HerokuConnect()
 
 serverPort = ("127.0.0.1", 65000)
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 @app.route("/")
 def entryScreen():
