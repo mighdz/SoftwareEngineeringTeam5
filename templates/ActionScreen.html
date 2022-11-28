@@ -73,39 +73,37 @@
       		font-size: 60px;
       	}
       </style>
-	
-	
-	
-	<body style="background-color:black">
-		
-		<!-- Scores Header -->
-		<div class ="row">
-			<h2 style="color:white"> &emsp; Current Scores </h1>
-		</div>
-		
-		<!-- Scores Box -->
-		<div class="box1" style="color:white">
-			<div class ="row">
-			
-				<div class="column">
-					<center>
-					
-					<!-- Red Team Name -->
-					<h2>RED TEAM</h2>
-					
-					</center>
+
+      <script>
+      	function countdown() {
+        var seconds = 31;
+	var minutes = 0;
+        var check = false;
+        function tick() {
+          var counter = document.getElementById("counter");
+          seconds--;
+          counter.innerHTML =
+            minutes + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+	  while(minutes >= 0)
+	  {
+               if (seconds > 0) {
+		    setTimeout(tick, 1000);
+		  }
+         if (minutes == 0 && seconds == 0 && check == false) {
+              minutes = 5;
+              seconds = 60;
+              check = true;
+           }
+              else if (seconds == 0 && check == true) {
+              minutes--;
+              seconds = 60;
+      	          }
+		  else {
+		   		document.getElementById("verifiBtn").innerHTML = `
+				<div class="Btn" id="ResendBtn">
+					<button type="submit">Resend</button>
 				</div>
-				
-				<div class="column">
-					<center>
-					
-					<!-- Green Team Name -->
-					<h2>GREEN TEAM</h2>
-					
-					</center>
-				</div>
-				
-			</div>
+				`;
 			
 			<div class ="row" style="font-size:115%">
 			
