@@ -202,7 +202,6 @@ def getPlayers():
             r1Code = getStuff[0][1]
             dictionary["red1ID"]=r1ID
             dictionary["red1Code"]=r1Code
-            print("r1 added")
         except IndexError:
             print("No value here!")
 

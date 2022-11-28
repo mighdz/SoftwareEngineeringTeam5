@@ -73,42 +73,225 @@
       		font-size: 60px;
       	}
       </style>
-
-      <script>
-      	function countdown() {
-        var seconds = 60;
-	var minutes = 5;
-        function tick() {
-          var counter = document.getElementById("counter");
-          seconds--;
-          counter.innerHTML =
-            minutes + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-	  while(minutes >= 0)
-	  {
-		  if (seconds > 0) {
-		    setTimeout(tick, 1000);
-		  }
-		  if (seconds == 0) {
-			  minutes--;
-			  seconds = 60;
-		  }
-		  else {
-		    document.getElementById("verifiBtn").innerHTML = `
-			<div class="Btn" id="ResendBtn">
-			    <button type="submit">Resend</button>
+	
+	
+	
+	<body style="background-color:black">
+		
+		<!-- Scores Header -->
+		<div class ="row">
+			<h2 style="color:white"> &emsp; Current Scores </h1>
+		</div>
+		
+		<!-- Scores Box -->
+		<div class="box1" style="color:white">
+			<div class ="row">
+			
+				<div class="column">
+					<center>
+					
+					<!-- Red Team Name -->
+					<h2>RED TEAM</h2>
+					
+					</center>
+				</div>
+				
+				<div class="column">
+					<center>
+					
+					<!-- Green Team Name -->
+					<h2>GREEN TEAM</h2>
+					
+					</center>
+				</div>
+				
 			</div>
-		    `;
-		    document.getElementById("counter").innerHTML = "";
-		  }
-	  }
-        }
-        tick();
-      }
-      countdown();
+			
+			<div class ="row" style="font-size:115%">
+			
+				<div class="column" style="color:firebrick">
+				
+					<div class="column" style="text-align:center">
+					<!-- Red Players -->
+					<div id = 'red1ID' style="float:left"></div>
+					<div id = 'red1Code' style="float:left"></div><br>
+					<div id = 'red2ID' style="float:left"></div>
+					<div id = 'red2Code' style="float:left"></div><br>
+					<div id = 'red3ID' style="float:left"></div>
+					<div id = 'red3Code' style="float:left"></div><br>
+					<div id = 'red4ID' style="float:left"></div>
+					<div id = 'red4Code' style="float:left"></div><br>
+					<div id = 'red5ID' style="float:left"></div>
+					<div id = 'red5Code' style="float:left"></div><br>
+					<div id = 'red6ID' style="float:left"></div>
+					<div id = 'red6Code' style="float:left"></div><br>
+					<div id = 'red7ID' style="float:left"></div>
+					<div id = 'red7Code' style="float:left"></div><br>
+					<div id = 'red8ID' style="float:left"></div>
+					<div id = 'red8Code' style="float:left"></div><br>
+					<div id = 'red9ID' style="float:left"></div>
+					<div id = 'red9Code' style="float:left"></div><br>
+					<div id = 'red10ID' style="float:left"></div>
+					<div id = 'red10Code' style="float:left"></div><br>
+					<div id = 'red11ID' style="float:left"></div>
+					<div id = 'red11Code' style="float:left"></div><br>
+					<div id = 'red12ID' style="float:left"></div>
+					<div id = 'red12Code' style="float:left"></div><br>
+					<div id = 'red13ID' style="float:left"></div>
+					<div id = 'red13Code' style="float:left"></div><br>
+					<div id = 'red14ID' style="float:left"></div>
+					<div id = 'red14Code' style="float:left"></div><br>
+					<div id = 'red15ID' style="float:left"></div>
+					<div id = 'red15Code' style="float:left"></div><br>
+					</div>
+					
+					<div class="column" style="text-align:center">
+					<!-- Red Player 1 Score
+					<h3>0000</h3> -->
+					
+					<!-- Red Player 2 Score
+					<h3>0000</h3> -->
+					
+					<!-- Add Remaining Player Scores -->
+					</div>
+					
+				</div>
+				
+				<div class="column" style="color:seagreen">
+					
+					<div class="column" style="text-align:center">
+					<!-- Green Players -->
+					<div id = 'green1ID' style="float:left"></div>
+					<div id = 'green1Code' style="float:left"></div><br>
+					<div id = 'green2ID' style="float:left"></div>
+					<div id = 'green2Code' style="float:left"></div><br>
+					<div id = 'green3ID' style="float:left"></div>
+					<div id = 'green3Code' style="float:left"></div><br>
+					<div id = 'green4ID' style="float:left"></div>
+					<div id = 'green4Code' style="float:left"></div><br>
+					<div id = 'green5ID' style="float:left"></div>
+					<div id = 'green5Code' style="float:left"></div><br>
+					<div id = 'green6ID' style="float:left"></div>
+					<div id = 'green6Code' style="float:left"></div><br>
+					<div id = 'green7ID' style="float:left"></div>
+					<div id = 'green7Code' style="float:left"></div><br>
+					<div id = 'green8ID' style="float:left"></div>
+					<div id = 'green8Code' style="float:left"></div><br>
+					<div id = 'green9ID' style="float:left"></div>
+					<div id = 'green9Code' style="float:left"></div><br>
+					<div id = 'green10ID' style="float:left"></div>
+					<div id = 'green10Code' style="float:left"></div><br>
+					<div id = 'green11ID' style="float:left"></div>
+					<div id = 'green11Code' style="float:left"></div><br>
+					<div id = 'green12ID' style="float:left"></div>
+					<div id = 'green12Code' style="float:left"></div><br>
+					<div id = 'green13ID' style="float:left"></div>
+					<div id = 'green13Code' style="float:left"></div><br>
+					<div id = 'green14ID' style="float:left"></div>
+					<div id = 'green14Code' style="float:left"></div><br>
+					<div id = 'green15ID' style="float:left"></div>
+					<div id = 'green15Code' style="float:left"></div><br>
+					</div>
+					
+					<div class="column" style="text-align:center">
+					
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- Action Header -->
+		<div class ="row">
+			<h2 style="color:white"> &emsp; Current Game Action </h1>
+		</div>
+		
+		<!-- Action Box -->
+		<div class="box3" style="color:white">
+			<center><p id="event" style="color:blue;"></p></center>
+		</div>
+		
+      <script>
+    //   	function countdown() {
+    //     var seconds = 60;
+	// 	var minutes = 5;
+    //     function tick() {
+    //       var counter = document.getElementById("counter");
+    //       seconds--;
+    //       counter.innerHTML =
+    //         minutes + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+	//   while(minutes >= 0)
+	//   {
+	// 	  console.log("in while loop");
+	// 	  if (seconds > 0) {
+	// 	    setTimeout(tick, 1000);
+	// 	  }
+	// 	  if (seconds == 0) {
+	// 		  minutes--;
+	// 		  seconds = 60;
+	// 	  }
+	// 	  else {
+	// 	    document.getElementById("verifiBtn").innerHTML = `
+	// 		<div class="Btn" id="ResendBtn">
+	// 		    <button type="submit">Resend</button>
+	// 		</div>
+	// 	    `;
+	// 	    document.getElementById("counter").innerHTML = "";
+	// 	  }
+	//   }
+    //     }
+    //     tick();
+    //   }
+    //   countdown();
+	//Set countdown to 15 seconds
+	var countDownTime = 15;
+
+	//Create variables to show events
+	var numEvents = -1;
+	var i = 0;
+
+	//Find where the countdown is supposed to be
+	var event = document.getElementById('event');
+
+	//Function for every 1 second to print the count
+	var time = setInterval(function() {
+	//Print countdown timer if time is positive //all members helped with this part
+	if (countDownTime >= 0){
+		event.innerHTML = countDownTime + ' seconds remaining until game starts';
+		countDownTime = countDownTime - 1;
+	}
+	//Tell user game has started
+	else if(countDownTime == -1){
+		event.innerHTML = "Game Start!";
+		countDownTime = countDownTime - 1;
+		numEvents = (eventsLength) * 5;
+		console.log(numEvents);
+	}
+	//Display all events
+	else if (numEvents > 0){
+		if (i < eventsLength){
+			event.innerHTML = events[i];
+		}
+		numEvents -= 1;
+		testVar = numEvents % 5;
+		if(testVar == 0){
+		i += 1;
+		}
+	//Display final score
+	}
+	else{
+		countPoints = "Red points: " + redPoints + " vs  " + "Green points: " + greenPoints;
+		event.innerHTML = countPoints;
+		countDownTime = countDownTime - 1;
+	}
+	
+	}, 1000);
 
 	  setTimeout(function loadPlayers() {
 		request = new XMLHttpRequest();
-		console.log("getPlayers request");
+
 		request.open('GET', '/getPlayers',true);
 
 		request.responseType = 'json';
@@ -358,166 +541,48 @@
 			// if (green15Code != null)
 			// 	document.getElementById('green15Code').innerHTML = green15Code;
 			
-				var ListOfEvents = requestObj.events;
-				tempLen = ListOfEvents.length;
-				ListOfEvents = ListOfEvents.slice(2);
-				ListOfEvents = ListOfEvents.substr(0, tempLen - 1);
-				events = ListOfEvents.split(",");
-				eventsLen = events.length;
-				console.log(events)
+				// var ListOfEvents = requestObj.events;
+				// tempLen = ListOfEvents.length;
+				// ListOfEvents = ListOfEvents.slice(2);
+				// ListOfEvents = ListOfEvents.substr(0, tempLen - 1);
+				// events = ListOfEvents.split(",");
+				// eventsLen = events.length;
+				// console.log(events)
 
-				redPoints = requestObj.redPoints;
-				let redLen = redPoints.length;
-				redPoints = redPoints.substr(0, redLen - 1);
+				// redPoints = requestObj.redPoints;
+				// let redLen = redPoints.length;
+				// redPoints = redPoints.substr(0, redLen - 1);
+				// redPoints = redPoints.slice(2);
+
+				// greenPoints = requestObj.greenPoints;
+				// let greenLen = greenPoints.length;
+				// greenPoints = greenPoints.substr(0, greenLen - 1);
+				// greenPoints = greenPoints.slice(2);
+				
+				var eventsList = testObj.events;
+				tempLenght = eventsList.length; //here
+				eventsList = eventsList.slice(2);
+				eventsList = eventsList.substr(0, tempLenght - 1);
+				events = eventsList.split(",");
+				eventsLength = events.length;
+				console.log(events);
+
+				//Gets the red team points
+				redPoints = testObj.redpoints;
+				let redLength = redPoints.length;
+				redPoints = redPoints.substr(0, redLength - 1);
 				redPoints = redPoints.slice(2);
 
-				greenPoints = requestObj.greenPoints;
-				let greenLen = greenPoints.length;
-				greenPoints = greenPoints.substr(0, greenLen - 1);
+				//Gets the green team points
+				greenPoints = testObj.greenpoints;
+				let greenLenght = greenPoints.length;
+				greenPoints = greenPoints.substr(0, greenLenght - 1);
 				greenPoints = greenPoints.slice(2);
 		}
-	  }, 10000);
+	  }, 5000);
 
       </script>
-	
-	
-	
-	<body style="background-color:black">
-		
-		<!-- Scores Header -->
-		<div class ="row">
-			<h2 style="color:white"> &emsp; Current Scores </h1>
-		</div>
-		
-		<!-- Scores Box -->
-		<div class="box1" style="color:white">
-			<div class ="row">
-			
-				<div class="column">
-					<center>
-					
-					<!-- Red Team Name -->
-					<h2>RED TEAM</h2>
-					
-					</center>
-				</div>
-				
-				<div class="column">
-					<center>
-					
-					<!-- Green Team Name -->
-					<h2>GREEN TEAM</h2>
-					
-					</center>
-				</div>
-				
-			</div>
-			
-			<div class ="row" style="font-size:115%">
-			
-				<div class="column" style="color:firebrick">
-				
-					<div class="column" style="text-align:center">
-					<!-- Red Players -->
-					<div id = 'red1ID' style="float:left"></div>
-					<div id = 'red1Code' style="float:left"></div><br>
-					<div id = 'red2ID' style="float:left"></div>
-					<div id = 'red2Code' style="float:left"></div><br>
-					<div id = 'red3ID' style="float:left"></div>
-					<div id = 'red3Code' style="float:left"></div><br>
-					<div id = 'red4ID' style="float:left"></div>
-					<div id = 'red4Code' style="float:left"></div><br>
-					<div id = 'red5ID' style="float:left"></div>
-					<div id = 'red5Code' style="float:left"></div><br>
-					<div id = 'red6ID' style="float:left"></div>
-					<div id = 'red6Code' style="float:left"></div><br>
-					<div id = 'red7ID' style="float:left"></div>
-					<div id = 'red7Code' style="float:left"></div><br>
-					<div id = 'red8ID' style="float:left"></div>
-					<div id = 'red8Code' style="float:left"></div><br>
-					<div id = 'red9ID' style="float:left"></div>
-					<div id = 'red9Code' style="float:left"></div><br>
-					<div id = 'red10ID' style="float:left"></div>
-					<div id = 'red10Code' style="float:left"></div><br>
-					<div id = 'red11ID' style="float:left"></div>
-					<div id = 'red11Code' style="float:left"></div><br>
-					<div id = 'red12ID' style="float:left"></div>
-					<div id = 'red12Code' style="float:left"></div><br>
-					<div id = 'red13ID' style="float:left"></div>
-					<div id = 'red13Code' style="float:left"></div><br>
-					<div id = 'red14ID' style="float:left"></div>
-					<div id = 'red14Code' style="float:left"></div><br>
-					<div id = 'red15ID' style="float:left"></div>
-					<div id = 'red15Code' style="float:left"></div><br>
-					</div>
-					
-					<div class="column" style="text-align:center">
-					<!-- Red Player 1 Score
-					<h3>0000</h3> -->
-					
-					<!-- Red Player 2 Score
-					<h3>0000</h3> -->
-					
-					<!-- Add Remaining Player Scores -->
-					</div>
-					
-				</div>
-				
-				<div class="column" style="color:seagreen">
-					
-					<div class="column" style="text-align:center">
-					<!-- Green Players -->
-					<div id = 'green1ID' style="float:left"></div>
-					<div id = 'green1Code' style="float:left"></div><br>
-					<div id = 'green2ID' style="float:left"></div>
-					<div id = 'green2Code' style="float:left"></div><br>
-					<div id = 'green3ID' style="float:left"></div>
-					<div id = 'green3Code' style="float:left"></div><br>
-					<div id = 'green4ID' style="float:left"></div>
-					<div id = 'green4Code' style="float:left"></div><br>
-					<div id = 'green5ID' style="float:left"></div>
-					<div id = 'green5Code' style="float:left"></div><br>
-					<div id = 'green6ID' style="float:left"></div>
-					<div id = 'green6Code' style="float:left"></div><br>
-					<div id = 'green7ID' style="float:left"></div>
-					<div id = 'green7Code' style="float:left"></div><br>
-					<div id = 'green8ID' style="float:left"></div>
-					<div id = 'green8Code' style="float:left"></div><br>
-					<div id = 'green9ID' style="float:left"></div>
-					<div id = 'green9Code' style="float:left"></div><br>
-					<div id = 'green10ID' style="float:left"></div>
-					<div id = 'green10Code' style="float:left"></div><br>
-					<div id = 'green11ID' style="float:left"></div>
-					<div id = 'green11Code' style="float:left"></div><br>
-					<div id = 'green12ID' style="float:left"></div>
-					<div id = 'green12Code' style="float:left"></div><br>
-					<div id = 'green13ID' style="float:left"></div>
-					<div id = 'green13Code' style="float:left"></div><br>
-					<div id = 'green14ID' style="float:left"></div>
-					<div id = 'green14Code' style="float:left"></div><br>
-					<div id = 'green15ID' style="float:left"></div>
-					<div id = 'green15Code' style="float:left"></div><br>
-					</div>
-					
-					<div class="column" style="text-align:center">
-					
-					</div>
-					
-				</div>
-				
-			</div>
-			
-		</div>
-		
-		<!-- Action Header -->
-		<div class ="row">
-			<h2 style="color:white"> &emsp; Current Game Action </h1>
-		</div>
-		
-		<!-- Action Box -->
-		<div class="box3" style="color:white">
-			<center><p id="event" style="color:blue;"></p></center>
-		</div>
+
 			
 		
 	
