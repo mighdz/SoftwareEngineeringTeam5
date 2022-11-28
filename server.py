@@ -19,18 +19,14 @@ c_port = "Client IP Address:{}".format(address)
 print(c_msg)
 print(c_port)
 
-red1 = random.randint(1,5)
-red2 = random.randint(1,5)
-while (red1 == red2):
-    red2 = random.randint(1,5)
+red1 = 1
+red2 = 2
 
 red1 = str(red1)
 red2 = str(red2)
 
-green1 = random.randint(6,10)
-green2 = random.randint(6,10)
-while (green1 == green2):
-    green2 = random.randint(6,10)
+green1 = 3
+green2 = 4
 
 green1 = str(green1)
 green2 = str(green2)

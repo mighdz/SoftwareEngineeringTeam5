@@ -11,7 +11,7 @@ subprocess.Popen(['python', 'server.py'])
 #Declare class from herokudb.py
 hdb = HerokuConnect()
 
-serverPort = ("127.0.0.1", 65000)
+serverPort = ("127.0.0.1", 7500)
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
@@ -446,13 +446,13 @@ def getPlayers():
         bytesToSend = str.encode(c_msg)
         client_socket.sendto(bytesToSend, serverPort)
 
-        s_msg = client_socket.recvfrom(1024)
+        s_msg = client_socket.recvfrom(7501)
         msg = "{}".format(s_msg[0])
 
-        s_msg = client_socket.recvfrom(1024)
+        s_msg = client_socket.recvfrom(7501)
         redPoints = "{}".format(s_msg[0])
 
-        s_msg = client_socket.recvfrom(1024)
+        s_msg = client_socket.recvfrom(7501)
         greenPoints = "{}".format(s_msg[0])
 
         dictionaryWithPoints = {}
