@@ -10,7 +10,7 @@ server_socket.bind((Host, Port))
 
 print("UDP server listening")
 
-byteAddressPair = server_socket.recvfrom(7501)
+byteAddressPair = server_socket.recvfrom(1024)
 msg = byteAddressPair[0]
 address = byteAddressPair[1]
 c_msg = "Message from Client:{}".format(msg)
