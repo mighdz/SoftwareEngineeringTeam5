@@ -76,8 +76,9 @@
 
       <script>
       	function countdown() {
-        var seconds = 60;
-	var minutes = 5;
+        var seconds = 31;
+	var minutes = 0;
+        var check = false;
         function tick() {
           var counter = document.getElementById("counter");
           seconds--;
@@ -85,13 +86,18 @@
             minutes + ":" + (seconds < 10 ? "0" : "") + String(seconds);
 	  while(minutes >= 0)
 	  {
-		  if (seconds > 0) {
+               if (seconds > 0) {
 		    setTimeout(tick, 1000);
 		  }
-		  if (seconds == 0) {
-			  minutes--;
-			  seconds = 60;
-		  }
+         if (minutes == 0 && seconds == 0 && check == false) {
+              minutes = 5;
+              seconds = 60;
+              check = true;
+           }
+              else if (seconds == 0 && check == true) {
+              minutes--;
+              seconds = 60;
+      	          }
 		  else {
 		    document.getElementById("verifiBtn").innerHTML = `
 			<div class="Btn" id="ResendBtn">
