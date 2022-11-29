@@ -31,7 +31,7 @@ green2 = 4
 green1 = str(green1)
 green2 = str(green2)
 
-counter = 60
+counter = 75
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 

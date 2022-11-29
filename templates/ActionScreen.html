@@ -258,52 +258,112 @@
 		
 		<!-- Action Box -->
 		<div class="box3" style="color:white">
-			<center><h3 id="event" style="color:royalblue;"></h3></center>
+			<center><h3 id="event1" style="color:royalblue;"></h3></center>
+			<center><h3 id="event2" style="color:royalblue;"></h3></center>
+			<center><h3 id="event3" style="color:royalblue;"></h3></center>
+			<center><h3 id="event4" style="color:royalblue;"></h3></center>
+			<center><h3 id="event5" style="color:royalblue;"></h3></center>
+			<center><h3 id="event6" style="color:royalblue;"></h3></center>
+			<center><h3 id="event7" style="color:royalblue;"></h3></center>
 		</div>
 
 		<script>
 
-	//Set countdown to 30 seconds
-	var countDownTime = 30;
-	var countDownTime2 = 390;
+	var countDownTime = 10;
+	var countDownTime2 = 370;
 
-	//Create variables to show events
 	var numEvents = -1;
+	var a = 0;
  	var i = 0;
 	var i1 = 0;
 	var i2 = 0;
 	var i3 = 0;
 	var i4 = 0;
+	var i5 = 0;
+	var i6 = 0;
 
-	//Find where the countdown is supposed to be
-	var event = document.getElementById('event');
-	var r1Score = document.getElementById('red1Score');
-	var r2Score = document.getElementById('red2Score');
-	var g3Score = document.getElementById('green3Score');
-	var g4Score = document.getElementById('green4Score');
+	var event1 = document.getElementById('event1');
+	var event2 = document.getElementById('event2');
+	var event3 = document.getElementById('event3');
+	var event4 = document.getElementById('event4');
+	var event5 = document.getElementById('event5');
+	var event6 = document.getElementById('event6');
+	var event7 = document.getElementById('event7');
 
-	//Function for every 1 second to print the count
 	var time = setInterval(function() {
-		//Print countdown timer if time is positive //all members helped with this part
 		if (countDownTime >= 0){
-			event.innerHTML = countDownTime + ' seconds remaining until game starts';
-			counter.innerHTML = countDownTime2;
+			event1.innerHTML = countDownTime + ' seconds remaining until game starts';
 			countDownTime = countDownTime - 1;
-			// countDownTime2 = countDownTime2 - 1;
 		}
-		//Tell user game has started
 		else if(countDownTime == -1){
-			event.innerHTML = "Game Start!";
+			event1.innerHTML = "Game Start!";
 			countDownTime = countDownTime - 1;
-			// countDownTime2 = countDownTime2 - 1;
 			numEvents = (eventsLen) * 5;
 		}
 		else if(numEvents > 0 && (countDownTime2 <= 360)) {
-			// countDownTime2 = CountDownTime2 - 1;
 			if (i < eventsLen){
 
 				if(String(events[i]) == "1 shot 3") {
-					event.innerHTML = "Red player 1 shot Green player 3";
+					if(event1.innerHTML == "")
+					{
+						if(a == i) {
+							event1.innerHTML = "Red player 1 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event2.innerHTML == "")
+					{
+						if(a == i) {
+							event2.innerHTML = "Red player 1 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event3.innerHTML == "")
+					{
+						if(a == i) {
+							event3.innerHTML = "Red player 1 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event4.innerHTML == "")
+					{
+						if(a == i) {
+							event4.innerHTML = "Red player 1 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event5.innerHTML == "")
+					{
+						if(a == i) {
+							event5.innerHTML = "Red player 1 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event6.innerHTML == "")
+					{
+						if(a == i) {
+							event6.innerHTML = "Red player 1 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event7.innerHTML == "")
+					{
+						if(a == i) {
+							event7.innerHTML = "Red player 1 shot Green player 3";
+							a++;
+						}
+					}
+					else{
+						event1.innerHTML = "";
+						event2.innerHTML = "";
+						event3.innerHTML = "";
+						event4.innerHTML = "";
+						event5.innerHTML = "";
+						event6.innerHTML = "";
+						event7.innerHTML = "";	
+						event1.innerHTML = "Red player 1 shot Green player 3";
+					}
+
 					i1 += 1;
 					if(i1 == 5)
 						red1Score.innerHTML = "1";
@@ -368,7 +428,65 @@
 
 				}
 				else if(String(events[i]) == "1 shot 4") {
-					event.innerHTML = "Red player 1 shot Green player 4";
+					if(event1.innerHTML == "")
+					{
+						if(a == i) {
+							event1.innerHTML = "Red player 1 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event2.innerHTML == "")
+					{
+						if(a == i) {
+							event2.innerHTML = "Red player 1 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event3.innerHTML == "")
+					{
+						if(a == i) {
+							event3.innerHTML = "Red player 1 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event4.innerHTML == "")
+					{
+						if(a == i) {
+							event4.innerHTML = "Red player 1 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event5.innerHTML == "")
+					{
+						if(a == i) {
+							event5.innerHTML = "Red player 1 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event6.innerHTML == "")
+					{
+						if(a == i) {
+							event6.innerHTML = "Red player 1 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event7.innerHTML == "")
+					{
+						if(a == i) {
+							event7.innerHTML = "Red player 1 shot Green player 4";
+							a++;
+						}
+					}
+					else{
+						event1.innerHTML = "";
+						event2.innerHTML = "";
+						event3.innerHTML = "";
+						event4.innerHTML = "";
+						event5.innerHTML = "";
+						event6.innerHTML = "";
+						event7.innerHTML = "";	
+						event1.innerHTML = "Red player 1 shot Green player 4";
+					}
 					i1 += 1;
 					if(i1 == 5)
 						red1Score.innerHTML = "1";
@@ -432,7 +550,65 @@
 						red1Score.innerHTML = "30";
 				}
 				else if(String(events[i]) == "2 shot 3") {
-					event.innerHTML = "Red player 2 shot Green player 3";
+					if(event1.innerHTML == "")
+					{
+						if(a == i) {
+							event1.innerHTML = "Red player 2 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event2.innerHTML == "")
+					{
+						if(a == i) {
+							event2.innerHTML = "Red player 2 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event3.innerHTML == "")
+					{
+						if(a == i) {
+							event3.innerHTML = "Red player 2 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event4.innerHTML == "")
+					{
+						if(a == i) {
+							event4.innerHTML = "Red player 2 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event5.innerHTML == "")
+					{
+						if(a == i) {
+							event5.innerHTML = "Red player 2 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event6.innerHTML == "")
+					{
+						if(a == i) {
+							event6.innerHTML = "Red player 2 shot Green player 3";
+							a++;
+						}
+					}
+					else if(event7.innerHTML == "")
+					{
+						if(a == i) {
+							event7.innerHTML = "Red player 2 shot Green player 3";
+							a++;
+						}
+					}
+					else{
+						event1.innerHTML = "";
+						event2.innerHTML = "";
+						event3.innerHTML = "";
+						event4.innerHTML = "";
+						event5.innerHTML = "";
+						event6.innerHTML = "";
+						event7.innerHTML = "";	
+						event1.innerHTML = "Red player 2 shot Green player 3";
+					}
 					i2 += 1;
 					if(i2 == 5)
 						red2Score.innerHTML = "1";
@@ -496,7 +672,66 @@
 						red2Score.innerHTML = "30";
 				}
 				else if(String(events[i]) == "2 shot 4") {
-					event.innerHTML = "Red player 2 shot Green player 4";
+					if(event1.innerHTML == "")
+					{
+						if(a == i) {
+							event1.innerHTML = "Red player 2 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event2.innerHTML == "")
+					{
+						if(a == i) {
+							event2.innerHTML = "Red player 2 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event3.innerHTML == "")
+					{
+						if(a == i) {
+							event3.innerHTML = "Red player 2 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event4.innerHTML == "")
+					{
+						if(a == i) {
+							event4.innerHTML = "Red player 2 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event5.innerHTML == "")
+					{
+						if(a == i) {
+							event5.innerHTML = "Red player 2 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event6.innerHTML == "")
+					{
+						if(a == i) {
+							event6.innerHTML = "Red player 2 shot Green player 4";
+							a++;
+						}
+					}
+					else if(event7.innerHTML == "")
+					{
+						if(a == i) {
+							event7.innerHTML = "Red player 2 shot Green player 4";
+							a++;
+						}
+					}
+					else{
+						event1.innerHTML = "";
+						event2.innerHTML = "";
+						event3.innerHTML = "";
+						event4.innerHTML = "";
+						event5.innerHTML = "";
+						event6.innerHTML = "";
+						event7.innerHTML = "";	
+						event1.innerHTML = "Red player 2 shot Green player 4";
+					}
+				
 					i2 += 1;
 					if(i2 == 5)
 						red2Score.innerHTML = "1";
@@ -560,7 +795,65 @@
 						red2Score.innerHTML = "30";
 				}
 				else if(String(events[i]) == "3 shot 1") {
-					event.innerHTML = "Green player 3 shot Red player 1";
+					if(event1.innerHTML == "")
+					{
+						if(a == i) {
+							event1.innerHTML = "Green player 3 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event2.innerHTML == "")
+					{
+						if(a == i) {
+							event2.innerHTML = "Green player 3 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event3.innerHTML == "")
+					{
+						if(a == i) {
+							event3.innerHTML = "Green player 3 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event4.innerHTML == "")
+					{
+						if(a == i) {
+							event4.innerHTML = "Green player 3 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event5.innerHTML == "")
+					{
+						if(a == i) {
+							event5.innerHTML = "Green player 3 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event6.innerHTML == "")
+					{
+						if(a == i) {
+							event6.innerHTML = "Green player 3 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event7.innerHTML == "")
+					{
+						if(a == i) {
+							event7.innerHTML = "Green player 3 shot Red player 1";
+							a++;
+						}
+					}
+					else{
+						event1.innerHTML = "";
+						event2.innerHTML = "";
+						event3.innerHTML = "";
+						event4.innerHTML = "";
+						event5.innerHTML = "";
+						event6.innerHTML = "";
+						event7.innerHTML = "";	
+						event1.innerHTML = "Green player 3 shot Red player 1";
+					}
 					i3 += 1;
 					if(i3 == 5)
 						green3Score.innerHTML = "1";
@@ -624,7 +917,65 @@
 						green3Score.innerHTML = "30";
 				}
 				else if(String(events[i]) == "3 shot 2") {
-					event.innerHTML = "Green player 3 shot Red player 2";
+					if(event1.innerHTML == "")
+					{
+						if(a == i) {
+							event1.innerHTML = "Green player 3 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event2.innerHTML == "")
+					{
+						if(a == i) {
+							event2.innerHTML = "Green player 3 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event3.innerHTML == "")
+					{
+						if(a == i) {
+							event3.innerHTML = "Green player 3 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event4.innerHTML == "")
+					{
+						if(a == i) {
+							event4.innerHTML = "Green player 3 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event5.innerHTML == "")
+					{
+						if(a == i) {
+							event5.innerHTML = "Green player 3 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event6.innerHTML == "")
+					{
+						if(a == i) {
+							event6.innerHTML = "Green player 3 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event7.innerHTML == "")
+					{
+						if(a == i) {
+							event7.innerHTML = "Green player 3 shot Red player 2";
+							a++;
+						}
+					}
+					else{
+						event1.innerHTML = "";
+						event2.innerHTML = "";
+						event3.innerHTML = "";
+						event4.innerHTML = "";
+						event5.innerHTML = "";
+						event6.innerHTML = "";
+						event7.innerHTML = "";	
+						event1.innerHTML = "Green player 3 shot Red player 2";
+					}					
 					i3 += 1;
 					if(i3 == 5)
 						green3Score.innerHTML = "1";
@@ -688,7 +1039,65 @@
 						green3Score.innerHTML = "30";
 				}
 				else if(String(events[i]) == "4 shot 1") {
-					event.innerHTML = "Green player 4 shot Red player 1";
+					if(event1.innerHTML == "")
+					{
+						if(a == i) {
+							event1.innerHTML = "Green player 4 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event2.innerHTML == "")
+					{
+						if(a == i) {
+							event2.innerHTML = "Green player 4 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event3.innerHTML == "")
+					{
+						if(a == i) {
+							event3.innerHTML = "Green player 4 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event4.innerHTML == "")
+					{
+						if(a == i) {
+							event4.innerHTML = "Green player 4 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event5.innerHTML == "")
+					{
+						if(a == i) {
+							event5.innerHTML = "Green player 4 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event6.innerHTML == "")
+					{
+						if(a == i) {
+							event6.innerHTML = "Green player 4 shot Red player 1";
+							a++;
+						}
+					}
+					else if(event7.innerHTML == "")
+					{
+						if(a == i) {
+							event7.innerHTML = "Green player 4 shot Red player 1";
+							a++;
+						}
+					}
+					else{
+						event1.innerHTML = "";
+						event2.innerHTML = "";
+						event3.innerHTML = "";
+						event4.innerHTML = "";
+						event5.innerHTML = "";
+						event6.innerHTML = "";
+						event7.innerHTML = "";	
+						event1.innerHTML = "Green player 4 shot Red player 1";
+					}
 					i4 += 1;
 					if(i4 == 5)
 						green4Score.innerHTML = "1";
@@ -752,7 +1161,65 @@
 						green4Score.innerHTML = "30";
 				}
 				else if(String(events[i]) == "4 shot 2") {
-					event.innerHTML = "Green player 4 shot Red player 2";
+					if(event1.innerHTML == "")
+					{
+						if(a == i) {
+							event1.innerHTML = "Green player 4 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event2.innerHTML == "")
+					{
+						if(a == i) {
+							event2.innerHTML = "Green player 4 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event3.innerHTML == "")
+					{
+						if(a == i) {
+							event3.innerHTML = "Green player 4 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event4.innerHTML == "")
+					{
+						if(a == i) {
+							event4.innerHTML = "Green player 4 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event5.innerHTML == "")
+					{
+						if(a == i) {
+							event5.innerHTML = "Green player 4 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event6.innerHTML == "")
+					{
+						if(a == i) {
+							event6.innerHTML = "Green player 4 shot Red player 2";
+							a++;
+						}
+					}
+					else if(event7.innerHTML == "")
+					{
+						if(a == i) {
+							event7.innerHTML = "Green player 4 shot Red player 2";
+							a++;
+						}
+					}
+					else{
+						event1.innerHTML = "";
+						event2.innerHTML = "";
+						event3.innerHTML = "";
+						event4.innerHTML = "";
+						event5.innerHTML = "";
+						event6.innerHTML = "";
+						event7.innerHTML = "";	
+						event1.innerHTML = "Green player 4 shot Red player 2";
+					}
 					i4 += 1;
 					if(i4 == 5)
 						green4Score.innerHTML = "1";
@@ -815,21 +1282,267 @@
 					if(i4 == 150)
 						green4Score.innerHTML = "30";
 				}
+
+				i5 = i1 + i2;
+				if(i5 == 5)
+					redTotal.innerHTML = "1";
+				if(i5 == 10)
+					redTotal.innerHTML = "2";
+				if(i5 == 15)
+					redTotal.innerHTML = "3";
+				if(i5 == 20)
+					redTotal.innerHTML = "4";
+				if(i5 == 25)
+					redTotal.innerHTML = "5";
+				if(i5 == 30)
+					redTotal.innerHTML = "6";
+				if(i5 == 35)
+					redTotal.innerHTML = "7";
+				if(i5 == 40)
+					redTotal.innerHTML = "8";
+				if(i5 == 45)
+					redTotal.innerHTML = "9";
+				if(i5 == 50)
+					redTotal.innerHTML = "10";
+				if(i5 == 55)
+					redTotal.innerHTML = "11";
+				if(i5 == 60)
+					redTotal.innerHTML = "12";
+				if(i5 == 65)
+					redTotal.innerHTML = "13";
+				if(i5 == 70)
+					redTotal.innerHTML = "14";
+				if(i5 == 75)
+					redTotal.innerHTML = "15";
+				if(i5 == 80)
+					redTotal.innerHTML = "16";
+				if(i5 == 85)
+					redTotal.innerHTML = "17";
+				if(i5 == 90)
+					redTotal.innerHTML = "18";
+				if(i5 == 95)
+					redTotal.innerHTML = "19";
+				if(i5 == 100)
+					redTotal.innerHTML = "20";
+				if(i5 == 105)
+					redTotal.innerHTML = "21";
+				if(i5 == 110)
+					redTotal.innerHTML = "22";
+				if(i5 == 115)
+					redTotal.innerHTML = "23";
+				if(i5 == 120)
+					redTotal.innerHTML = "24";
+				if(i5 == 125)
+					redTotal.innerHTML = "25";
+				if(i5 == 130)
+					redTotal.innerHTML = "26";
+				if(i5 == 135)
+					redTotal.innerHTML = "27";
+				if(i5 == 140)
+					redTotal.innerHTML = "28";
+				if(i5 == 145)
+					redTotal.innerHTML = "29";
+				if(i5 == 150)
+					redTotal.innerHTML = "30";
+				if(i5 == 155)
+					redTotal.innerHTML = "31";
+				if(i5 == 160)
+					redTotal.innerHTML = "32";
+				if(i5 == 165)
+					redTotal.innerHTML = "33";
+				if(i5 == 170)
+					redTotal.innerHTML = "34";
+				if(i5 == 175)
+					redTotal.innerHTML = "35";
+				if(i5 == 180)
+					redTotal.innerHTML = "36";
+				if(i5 == 185)
+					redTotal.innerHTML = "37";
+				if(i5 == 190)
+					redTotal.innerHTML = "38";
+				if(i5 == 195)
+					redTotal.innerHTML = "39";
+				if(i5 == 200)
+					redTotal.innerHTML = "40";
+				if(i5 == 205)
+					redTotal.innerHTML = "41";
+				if(i5 == 210)
+					redTotal.innerHTML = "42";
+				if(i5 == 215)
+					redTotal.innerHTML = "43";
+				if(i5 == 220)
+					redTotal.innerHTML = "44";
+				if(i5 == 225)
+					redTotal.innerHTML = "45";
+				if(i5 == 230)
+					redTotal.innerHTML = "46";
+				if(i5 == 235)
+					redTotal.innerHTML = "47";
+				if(i5 == 240)
+					redTotal.innerHTML = "48";
+				if(i5 == 245)
+					redTotal.innerHTML = "49";
+				if(i5 == 250)
+					redTotal.innerHTML = "50";
+				if(i5 == 255)
+					redTotal.innerHTML = "51";
+				if(i5 == 260)
+					redTotal.innerHTML = "52";
+				if(i5 == 265)
+					redTotal.innerHTML = "53";
+				if(i5 == 270)
+					redTotal.innerHTML = "54";
+				if(i5 == 275)
+					redTotal.innerHTML = "55";
+				if(i5 == 280)
+					redTotal.innerHTML = "56";
+				if(i5 == 285)
+					redTotal.innerHTML = "57";
+				if(i5 == 290)
+					redTotal.innerHTML = "58";
+				if(i5 == 295)
+					redTotal.innerHTML = "59";
+				if(i5 == 300)
+					redTotal.innerHTML = "60";
+				
+				i6 = i3 + i4;
+				if(i6 == 5)
+					greenTotal.innerHTML = "1";
+				if(i6 == 10)
+					greenTotal.innerHTML = "2";
+				if(i6 == 15)
+					greenTotal.innerHTML = "3";
+				if(i6 == 20)
+					greenTotal.innerHTML = "4";
+				if(i6 == 25)
+					greenTotal.innerHTML = "5";
+				if(i6 == 30)
+					greenTotal.innerHTML = "6";
+				if(i6 == 35)
+					greenTotal.innerHTML = "7";
+				if(i6 == 40)
+					greenTotal.innerHTML = "8";
+				if(i6 == 45)
+					greenTotal.innerHTML = "9";
+				if(i6 == 50)
+					greenTotal.innerHTML = "10";
+				if(i6 == 55)
+					greenTotal.innerHTML = "11";
+				if(i6 == 60)
+					greenTotal.innerHTML = "12";
+				if(i6 == 65)
+					greenTotal.innerHTML = "13";
+				if(i6 == 70)
+					greenTotal.innerHTML = "14";
+				if(i6 == 75)
+					greenTotal.innerHTML = "15";
+				if(i6 == 80)
+					greenTotal.innerHTML = "16";
+				if(i6 == 85)
+					greenTotal.innerHTML = "17";
+				if(i6 == 90)
+					greenTotal.innerHTML = "18";
+				if(i6 == 95)
+					greenTotal.innerHTML = "19";
+				if(i6 == 100)
+					greenTotal.innerHTML = "20";
+				if(i6 == 105)
+					greenTotal.innerHTML = "21";
+				if(i6 == 110)
+					greenTotal.innerHTML = "22";
+				if(i6 == 115)
+					greenTotal.innerHTML = "23";
+				if(i6 == 120)
+					greenTotal.innerHTML = "24";
+				if(i6 == 125)
+					greenTotal.innerHTML = "25";
+				if(i6 == 130)
+					greenTotal.innerHTML = "26";
+				if(i6 == 135)
+					greenTotal.innerHTML = "27";
+				if(i6 == 140)
+					greenTotal.innerHTML = "28";
+				if(i6 == 145)
+					greenTotal.innerHTML = "29";
+				if(i6 == 150)
+					greenTotal.innerHTML = "30";
+				if(i6 == 155)
+					greenTotal.innerHTML = "31";
+				if(i6 == 160)
+					greenTotal.innerHTML = "32";
+				if(i6 == 165)
+					greenTotal.innerHTML = "33";
+				if(i6 == 170)
+					greenTotal.innerHTML = "34";
+				if(i6 == 175)
+					greenTotal.innerHTML = "35";
+				if(i6 == 180)
+					greenTotal.innerHTML = "36";
+				if(i6 == 185)
+					greenTotal.innerHTML = "37";
+				if(i6 == 190)
+					greenTotal.innerHTML = "38";
+				if(i6 == 195)
+					greenTotal.innerHTML = "39";
+				if(i6 == 200)
+					greenTotal.innerHTML = "40";
+				if(i6 == 205)
+					greenTotal.innerHTML = "41";
+				if(i6 == 210)
+					greenTotal.innerHTML = "42";
+				if(i6 == 215)
+					greenTotal.innerHTML = "43";
+				if(i6 == 220)
+					greenTotal.innerHTML = "44";
+				if(i6 == 225)
+					greenTotal.innerHTML = "45";
+				if(i6 == 230)
+					greenTotal.innerHTML = "46";
+				if(i6 == 235)
+					greenTotal.innerHTML = "47";
+				if(i6 == 240)
+					greenTotal.innerHTML = "48";
+				if(i6 == 245)
+					greenTotal.innerHTML = "49";
+				if(i6 == 250)
+					greenTotal.innerHTML = "50";
+				if(i6 == 255)
+					greenTotal.innerHTML = "51";
+				if(i6 == 260)
+					greenTotal.innerHTML = "52";
+				if(i6 == 265)
+					greenTotal.innerHTML = "53";
+				if(i6 == 270)
+					greenTotal.innerHTML = "54";
+				if(i6 == 275)
+					greenTotal.innerHTML = "55";
+				if(i6 == 280)
+					greenTotal.innerHTML = "56";
+				if(i6 == 285)
+					greenTotal.innerHTML = "57";
+				if(i6 == 290)
+					greenTotal.innerHTML = "58";
+				if(i6 == 295)
+					greenTotal.innerHTML = "59";
+				if(i6 == 300)
+					greenTotal.innerHTML = "60";
+
 				numEvents -= 1;
 				testVar = numEvents % 5;
 				if(testVar == 0){
 					i += 1;
+					a = i;
 				}
 			}
 		}
 		else{
-			red_points = red1Score + red2Score;
-			green_points = green3Score + green4Score;
+			red_points = i5 / 5;
+			green_points = i6 / 5;
 			final_score = "Red points: " + red_points + " vs  " + "Green points: " + green_points;
 			event.innerHTML = final_score;
 			countDownTime = countDownTime - 1;
-			// countDownTime2 = countDownTime2 - 1;
 		}
+		counter.innerHTML = countDownTime2;
 		countDownTime2 = countDownTime2 - 1;
 	}, 1000);
 
