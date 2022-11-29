@@ -104,7 +104,45 @@
 					<button type="submit">Resend</button>
 				</div>
 				`;
+			}
+		}
+	}
+}
+			</script>
+
+	
+	
+	
+<body style="background-color:black">
+		
+	<!-- Scores Header -->
+	<div class ="row">
+		<h2 style="color:white"> &emsp; Current Scores </h1>
+	</div>
+	
+	<!-- Scores Box -->
+	<div class="box1" style="color:white">
+		<div class ="row">
+		
+			<div class="column">
+				<center>
+				
+				<!-- Red Team Name -->
+				<h2>RED TEAM</h2>
+				
+				</center>
+			</div>
 			
+			<div class="column">
+				<center>
+				
+				<!-- Green Team Name -->
+				<h2>GREEN TEAM</h2>
+				
+				</center>
+			</div>
+		</div>
+
 			<div class ="row" style="font-size:115%">
 			
 				<div class="column" style="color:firebrick">
@@ -144,11 +182,11 @@
 					</div>
 					
 					<div class="column" style="text-align:center">
-					<!-- Red Player 1 Score
-					<h3>0000</h3> -->
+					<!-- Red Player 1 Score -->
+					<h3 id = "red1Score"></h3>
 					
-					<!-- Red Player 2 Score
-					<h3>0000</h3> -->
+					<!-- Red Player 2 Score -->
+					<h3 id = "red2Score"></h3>
 					
 					<!-- Add Remaining Player Scores -->
 					</div>
@@ -192,7 +230,11 @@
 					</div>
 					
 					<div class="column" style="text-align:center">
-					
+						<!-- Green Player 1 Score -->
+						<h3 id = "green3Score"></h3>
+						
+						<!-- Green Player 2 Score -->
+						<h3 id = "green4Score"></h3>
 					</div>
 					
 				</div>
@@ -203,88 +245,106 @@
 		
 		<!-- Action Header -->
 		<div class ="row">
-			<h2 style="color:white"> &emsp; Current Game Action </h1>
+			<h2 style="color:white"> &emsp; Current Game Action </h2>
 		</div>
 		
 		<!-- Action Box -->
 		<div class="box3" style="color:white">
 			<center><h3 id="event" style="color:royalblue;"></h3></center>
 		</div>
-		
-      <script>
-    //   	function countdown() {
-    //     var seconds = 60;
-	// 	var minutes = 5;
-    //     function tick() {
-    //       var counter = document.getElementById("counter");
-    //       seconds--;
-    //       counter.innerHTML =
-    //         minutes + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-	//   while(minutes >= 0)
-	//   {
-	// 	  console.log("in while loop");
-	// 	  if (seconds > 0) {
-	// 	    setTimeout(tick, 1000);
-	// 	  }
-	// 	  if (seconds == 0) {
-	// 		  minutes--;
-	// 		  seconds = 60;
-	// 	  }
-	// 	  else {
-	// 	    document.getElementById("verifiBtn").innerHTML = `
-	// 		<div class="Btn" id="ResendBtn">
-	// 		    <button type="submit">Resend</button>
-	// 		</div>
-	// 	    `;
-	// 	    document.getElementById("counter").innerHTML = "";
-	// 	  }
-	//   }
-    //     }
-    //     tick();
-    //   }
-    //   countdown();
-	//Set countdown to 15 seconds
-	var countDownTime = 15;
+
+		<script>
+
+	//Set countdown to 30 seconds
+	var countDownTime = 10;
+	var countDownTime2 = 370;
 
 	//Create variables to show events
 	var numEvents = -1;
-	var i = 0;
+ 	var i = 0;
 
 	//Find where the countdown is supposed to be
 	var event = document.getElementById('event');
+	var r1Score = document.getElementById('red1Score');
+	var r2Score = document.getElementById('red2Score');
+	var g3Score = document.getElementById('green3Score');
+	var g4Score = document.getElementById('green4Score');
 
 	//Function for every 1 second to print the count
 	var time = setInterval(function() {
-	//Print countdown timer if time is positive //all members helped with this part
-	if (countDownTime >= 0){
-		event.innerHTML = countDownTime + ' seconds remaining until game starts';
-		countDownTime = countDownTime - 1;
-	}
-	//Tell user game has started
-	else if(countDownTime == -1){
-		event.innerHTML = "Game Start!";
-		countDownTime = countDownTime - 1;
-		numEvents = (eventsLength) * 5;
-		console.log(numEvents);
-	}
-	//Display all events
-	else if (numEvents > 0){
-		if (i < eventsLength){
-			event.innerHTML = events[i];
+		//Print countdown timer if time is positive //all members helped with this part
+		if (countDownTime >= 0){
+			event.innerHTML = countDownTime + ' seconds remaining until game starts';
+			counter.innerHTML = countDownTime2;
+			countDownTime = countDownTime - 1;
+			countDownTime2 = countDownTime2 - 1;
 		}
-		numEvents -= 1;
-		testVar = numEvents % 5;
-		if(testVar == 0){
-		i += 1;
+		//Tell user game has started
+		else if(countDownTime == -1){
+			event.innerHTML = "Game Start!";
+			countDownTime = countDownTime - 1;
+			countDownTime2 = countDownTime2 - 1;
+			numEvents = (eventsLen) * 5;
 		}
-	//Display final score
-	}
-	else{
-		countPoints = "Red points: " + redPoints + " vs  " + "Green points: " + greenPoints;
-		event.innerHTML = countPoints;
-		countDownTime = countDownTime - 1;
-	}
-	
+		else if(numEvents > 0 && (countDownTime2 <= 360)) {
+			if (i < eventsLen){
+
+				if(String(events[i]) == "1 shot 3") {
+					event.innerHTML = "Red player 1 shot Green player 3";
+					r1Score += 1;
+					red1Score.innerHTML = r1Score;
+				}
+				else if(String(events[i]) == "1 shot 4") {
+					event.innerHTML = "Red player 1 shot Green player 4";
+					r1Score += 1;
+					red1Score.innerHTML = r1Score;
+				}
+				else if(String(events[i]) == "2 shot 3") {
+					event.innerHTML = "Red player 2 shot Green player 3";
+					r2Score += 1;
+					red2Score.innerHTML = r2Score;
+				}
+				else if(String(events[i]) == "2 shot 4") {
+					event.innerHTML = "Red player 2 shot Green player 4";
+					r2Score += 1;
+					red2Score.innerHTML = r2Score;
+				}
+				else if(String(events[i]) == "3 shot 1") {
+					event.innerHTML = "Green player 3 shot Red player 1";
+					g3Score += 1;
+					green3Score.innerHTML = g3Score;
+				}
+				else if(String(events[i]) == "3 shot 2") {
+					event.innerHTML = "Green player 3 shot Red player 2";
+					g3Score += 1;
+					green3Score.innerHTML = g3Score;
+				}
+				else if(String(events[i]) == "4 shot 1") {
+					event.innerHTML = "Green player 4 shot Red player 1";
+					g4Score += 1;
+					green4Score.innerHTML = g4Score;
+				}
+				else if(String(events[i]) == "4 shot 2") {
+					event.innerHTML = "Green player 4 shot Red player 2";
+					g4Score += 1;
+					green4Score.innerHTML = g4Score;
+				}
+				numEvents -= 1;
+				testVar = numEvents % 5;
+				if(testVar == 0){
+					i += 1;
+				}
+			}
+			countDownTime2 = CountDownTime2 - 1;
+		}
+		else{
+			red_points = red1Score + red2Score;
+			green_points = green3Score + green4Score;
+			final_score = "Red points: " + red_points + " vs  " + "Green points: " + green_points;
+			event.innerHTML = final_score;
+			countDownTime = countDownTime - 1;
+			countDownTime2 = countDownTime2 - 1;
+		}
 	}, 1000);
 
 	  setTimeout(function loadPlayers() {
@@ -307,58 +367,6 @@
 			if (red2ID != null)
 				document.getElementById('red2ID').innerHTML = red2ID;
 
-			// var red3ID = requestObj.red3ID;
-			// if (red3ID != null)
-			// 	document.getElementById('red3ID').innerHTML = red3ID;
-
-			// var red4ID = requestObj.red4ID;
-			// if (red4ID != null)
-			// 	document.getElementById('red4ID').innerHTML = red4ID;
-
-			// var red5ID = requestObj.red5ID;
-			// if (red5ID != null)
-			// 	document.getElementById('red5ID').innerHTML = red5ID;
-
-			// var red6ID = requestObj.red6ID;
-			// if (red6ID != null)
-			// 	document.getElementById('red6ID').innerHTML = red6ID;
-
-			// var red7ID = requestObj.red7ID;
-			// if (red7ID != null)
-			// 	document.getElementById('red7ID').innerHTML = red7ID;
-
-			// var red8ID = requestObj.red8ID;
-			// if (red8ID != null)
-			// 	document.getElementById('red8ID').innerHTML = red8ID;
-
-			// var red9ID = requestObj.red9ID;
-			// if (red9ID != null)
-			// 	document.getElementById('red9ID').innerHTML = red9ID;
-
-			// var red10ID = requestObj.red10ID;
-			// if (red10ID != null)
-			// 	document.getElementById('red10ID').innerHTML = red10ID;
-
-			// var red11ID = requestObj.red11ID;
-			// if (red11ID != null)
-			// 	document.getElementById('red11ID').innerHTML = red11ID;
-
-			// var red12ID = requestObj.red12ID;
-			// if (red12ID != null)
-			// 	document.getElementById('red12ID').innerHTML = red12ID;
-
-			// var red13ID = requestObj.red13ID;
-			// if (red13ID != null)
-			// 	document.getElementById('red13ID').innerHTML = red13ID;
-
-			// var red14ID = requestObj.red14ID;
-			// if (red14ID != null)
-			// 	document.getElementById('red14ID').innerHTML = red14ID;
-
-			// var red15ID = requestObj.red15ID;
-			// if (red15ID != null)
-			// 	document.getElementById('red15ID').innerHTML = red15ID;
-
 			var red1Code = requestObj.red1Code;
 			if (red1Code != null)
 				document.getElementById('red1Code').innerHTML = red1Code;
@@ -366,58 +374,6 @@
 			var red2Code = requestObj.red2Code;
 			if (red2Code != null)
 				document.getElementById('red2Code').innerHTML = red2Code;
-
-			// var red3Code = requestObj.red3Code;
-			// if (red3Code != null)
-			// 	document.getElementById('red3Code').innerHTML = red3Code;
-
-			// var red4Code = requestObj.red4Code;
-			// if (red4Code != null)
-			// 	document.getElementById('red4Code').innerHTML = red4Code;
-
-			// var red5Code = requestObj.red5Code;
-			// if (red5Code != null)
-			// 	document.getElementById('red5Code').innerHTML = red5Code;
-
-			// var red6Code = requestObj.red6Code;
-			// if (red6Code != null)
-			// 	document.getElementById('red6Code').innerHTML = red6Code;
-
-			// var red7Code = requestObj.red7Code;
-			// if (red7Code != null)
-			// 	document.getElementById('red7Code').innerHTML = red7Code;
-
-			// var red8Code = requestObj.red8Code;
-			// if (red8Code != null)
-			// 	document.getElementById('red8Code').innerHTML = red8Code;
-
-			// var red9Code = requestObj.red9Code;
-			// if (red9Code != null)
-			// 	document.getElementById('red9Code').innerHTML = red9Code;
-
-			// var red10Code = requestObj.red10Code;
-			// if (red10Code != null)
-			// 	document.getElementById('red10Code').innerHTML = red10Code;
-
-			// var red11Code = requestObj.red11Code;
-			// if (red11Code != null)
-			// 	document.getElementById('red11Code').innerHTML = red11Code;
-
-			// var red12Code = requestObj.red12Code;
-			// if (red12Code != null)
-			// 	document.getElementById('red12Code').innerHTML = red12Code;
-
-			// var red13Code = requestObj.red13Code;
-			// if (red13Code != null)
-			// 	document.getElementById('red13Code').innerHTML = red13Code;
-
-			// var red14Code = requestObj.red14Code;
-			// if (red14Code != null)
-			// 	document.getElementById('red14Code').innerHTML = red14Code;
-
-			// var red15Code = requestObj.red15Code;
-			// if (red15Code != null)
-			// 	document.getElementById('red15Code').innerHTML = red15Code;
 
 			var green1ID = requestObj.green1ID;
 			if (green1ID != null)
@@ -427,58 +383,6 @@
 			if (green2ID != null)
 				document.getElementById('green2ID').innerHTML = green2ID;
 
-			// var green3ID = requestObj.green3ID;
-			// if (green3ID != null)
-			// 	document.getElementById('green3ID').innerHTML = green3ID;
-
-			// var green4ID = requestObj.green4ID;
-			// if (green4ID != null)
-			// 	document.getElementById('green4ID').innerHTML = green4ID;
-
-			// var green5ID = requestObj.green5ID;
-			// if (green5ID != null)
-			// 	document.getElementById('green5ID').innerHTML = green5ID;
-
-			// var green6ID = requestObj.green6ID;
-			// if (green6ID != null)
-			// 	document.getElementById('green6ID').innerHTML = green6ID;
-
-			// var green7ID = requestObj.green7ID;
-			// if (green7ID != null)
-			// 	document.getElementById('green7ID').innerHTML = green7ID;
-
-			// var green8ID = requestObj.green8ID;
-			// if (green8ID != null)
-			// 	document.getElementById('green8ID').innerHTML = green8ID;
-
-			// var green9ID = requestObj.green9ID;
-			// if (green9ID != null)
-			// 	document.getElementById('green9ID').innerHTML = green9ID;
-
-			// var green10ID = requestObj.green10ID;
-			// if (green10ID != null)
-			// 	document.getElementById('green10ID').innerHTML = green10ID;
-
-			// var green11ID = requestObj.green11ID;
-			// if (green11ID != null)
-			// 	document.getElementById('green11ID').innerHTML = green11ID;
-
-			// var green12ID = requestObj.green12ID;
-			// if (green12ID != null)
-			// 	document.getElementById('green12ID').innerHTML = green12ID;
-
-			// var green13ID = requestObj.green13ID;
-			// if (green13ID != null)
-			// 	document.getElementById('green13ID').innerHTML = green13ID;
-
-			// var green14ID = requestObj.green14ID;
-			// if (green14ID != null)
-			// 	document.getElementById('green14ID').innerHTML = green14ID;
-
-			// var green15ID = requestObj.green15ID;
-			// if (green15ID != null)
-			// 	document.getElementById('green15ID').innerHTML = green15ID;
-
 			var green1Code = requestObj.green1Code;
 			if (green1Code != null)
 				document.getElementById('green1Code').innerHTML = green1Code;
@@ -486,95 +390,23 @@
 			var green2Code = requestObj.green2Code;
 			if (green2Code != null)
 				document.getElementById('green2Code').innerHTML = green2Code;
-
-			// var green3Code = requestObj.green3Code;
-			// if (green3Code != null)
-			// 	document.getElementById('green3Code').innerHTML = green3Code;
-
-			// var green4Code = requestObj.green4Code;
-			// if (green4Code != null)
-			// 	document.getElementById('green4Code').innerHTML = green4Code;
-
-			// var green5Code = requestObj.green5Code;
-			// if (green5Code != null)
-			// 	document.getElementById('green5Code').innerHTML = green5Code;
-
-			// var green6Code = requestObj.green6Code;
-			// if (green6Code != null)
-			// 	document.getElementById('green6Code').innerHTML = green6Code;
-
-			// var green7Code = requestObj.green7Code;
-			// if (green7Code != null)
-			// 	document.getElementById('green7Code').innerHTML = green7Code;
-
-			// var green8Code = requestObj.green8Code;
-			// if (green8Code != null)
-			// 	document.getElementById('green8Code').innerHTML = green8Code;
-
-			// var green9Code = requestObj.green9Code;
-			// if (green9Code != null)
-			// 	document.getElementById('green9Code').innerHTML = green9Code;
-
-			// var green10Code = requestObj.green10Code;
-			// if (green10Code != null)
-			// 	document.getElementById('green10Code').innerHTML = green10Code;
-
-			// var green11Code = requestObj.green11Code;
-			// if (green11Code != null)
-			// 	document.getElementById('green11Code').innerHTML = green11Code;
-
-			// var green12Code = requestObj.green12Code;
-			// if (green12Code != null)
-			// 	document.getElementById('green12Code').innerHTML = green12Code;
-
-			// var green13Code = requestObj.green13Code;
-			// if (green13Code != null)
-			// 	document.getElementById('green13Code').innerHTML = green13Code;
-
-			// var green14Code = requestObj.green14Code;
-			// if (green14Code != null)
-			// 	document.getElementById('green14Code').innerHTML = green14Code;
-
-			// var green15Code = requestObj.green15Code;
-			// if (green15Code != null)
-			// 	document.getElementById('green15Code').innerHTML = green15Code;
 			
-				// var ListOfEvents = requestObj.events;
-				// tempLen = ListOfEvents.length;
-				// ListOfEvents = ListOfEvents.slice(2);
-				// ListOfEvents = ListOfEvents.substr(0, tempLen - 1);
-				// events = ListOfEvents.split(",");
-				// eventsLen = events.length;
-				// console.log(events)
+				var ListOfEvents = requestObj.events;
+				tempLen = ListOfEvents.length;
+				ListOfEvents = ListOfEvents.slice(2);
+				ListOfEvents = ListOfEvents.substr(0, tempLen - 1);
+				events = ListOfEvents.split(" , ");
+				eventsLen = events.length;
+				console.log(events)
 
-				// redPoints = requestObj.redPoints;
-				// let redLen = redPoints.length;
-				// redPoints = redPoints.substr(0, redLen - 1);
-				// redPoints = redPoints.slice(2);
-
-				// greenPoints = requestObj.greenPoints;
-				// let greenLen = greenPoints.length;
-				// greenPoints = greenPoints.substr(0, greenLen - 1);
-				// greenPoints = greenPoints.slice(2);
-				
-				var eventsList = testObj.events;
-				tempLenght = eventsList.length; //here
-				eventsList = eventsList.slice(2);
-				eventsList = eventsList.substr(0, tempLenght - 1);
-				events = eventsList.split(",");
-				eventsLength = events.length;
-				console.log(events);
-
-				//Gets the red team points
-				redPoints = testObj.redpoints;
-				let redLength = redPoints.length;
-				redPoints = redPoints.substr(0, redLength - 1);
+				redPoints = requestObj.redPoints;
+				let redLen = redPoints.length;
+				redPoints = redPoints.substr(0, redLen - 1);
 				redPoints = redPoints.slice(2);
 
-				//Gets the green team points
-				greenPoints = testObj.greenpoints;
-				let greenLenght = greenPoints.length;
-				greenPoints = greenPoints.substr(0, greenLenght - 1);
+				greenPoints = requestObj.greenPoints;
+				let greenLen = greenPoints.length;
+				greenPoints = greenPoints.substr(0, greenLen - 1);
 				greenPoints = greenPoints.slice(2);
 		}
 	  }, 5000);

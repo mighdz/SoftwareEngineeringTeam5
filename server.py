@@ -25,14 +25,13 @@ red2 = 2
 red1 = str(red1)
 red2 = str(red2)
 
-green1 = 3
+green1 = 3  
 green2 = 4
 
 green1 = str(green1)
 green2 = str(green2)
 
-counter = random.randint(1,10)
-print(counter)
+counter = 60
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
@@ -52,10 +51,10 @@ while i < int(counter):
         greenplayer = green2
     
     if random.randint(1,2) == 1:
-        msg = "Red player " + redplayer + " shot Green player " + greenplayer
+        msg = redplayer + " shot " + greenplayer
         redPoints += 1
     else:
-        msg = "Green player " + greenplayer + " shot Red player " + redplayer
+        msg = greenplayer + " shot " + redplayer
         greenPoints += 1
     
     if i == 0:
@@ -64,6 +63,7 @@ while i < int(counter):
         total_msg += " , " + msg
     i += 1
 
+print(total_msg)
 server_socket.sendto(str.encode(str(total_msg)), address)
 server_socket.sendto(str.encode(str(redPoints)), address)
 server_socket.sendto(str.encode(str(greenPoints)), address)
