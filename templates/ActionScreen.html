@@ -256,8 +256,8 @@
 		<script>
 
 	//Set countdown to 30 seconds
-	var countDownTime = 10;
-	var countDownTime2 = 370;
+	var countDownTime = 30;
+	var countDownTime2 = 390;
 
 	//Create variables to show events
 	var numEvents = -1;
@@ -281,13 +281,13 @@
 			event.innerHTML = countDownTime + ' seconds remaining until game starts';
 			counter.innerHTML = countDownTime2;
 			countDownTime = countDownTime - 1;
-			countDownTime2 = countDownTime2 - 1;
+			// countDownTime2 = countDownTime2 - 1;
 		}
 		//Tell user game has started
 		else if(countDownTime == -1){
 			event.innerHTML = "Game Start!";
 			countDownTime = countDownTime - 1;
-			countDownTime2 = countDownTime2 - 1;
+			// countDownTime2 = countDownTime2 - 1;
 			numEvents = (eventsLen) * 5;
 		}
 		else if(numEvents > 0 && (countDownTime2 <= 360)) {
@@ -820,8 +820,9 @@
 			final_score = "Red points: " + red_points + " vs  " + "Green points: " + green_points;
 			event.innerHTML = final_score;
 			countDownTime = countDownTime - 1;
-			countDownTime2 = countDownTime2 - 1;
+			// countDownTime2 = countDownTime2 - 1;
 		}
+		countDownTime2 = countDownTime2 - 1;
 	}, 1000);
 
 	  setTimeout(function loadPlayers() {
