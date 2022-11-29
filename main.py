@@ -39,13 +39,13 @@ def enterPlayers():
         id = playerValues["red1ID"]
         Code = playerValues["red1Code"]
         hdb.playerAdd(id, Code)
-        
-        id = playerValues["green1ID"]
-        Code = playerValues["green1Code"]
-        hdb.playerAdd(id, Code)
-
+     
         id = playerValues["red2ID"]
         Code = playerValues["red2Code"]
+        hdb.playerAdd(id, Code)
+
+        id = playerValues["green1ID"]
+        Code = playerValues["green1Code"]
         hdb.playerAdd(id, Code)
 
         id = playerValues["green2ID"]
