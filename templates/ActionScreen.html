@@ -40,7 +40,13 @@
 		
 		.column2 {
 			float: left;
-			width: 8.33%;
+			width: 20%;
+			padding: 3px;
+		}
+		
+		.column3 {
+			float: left;
+			width: 5%;
 			padding: 3px;
 		}
 		
@@ -145,17 +151,19 @@
 
 			<div class ="row" style="font-size:115%">
 			
-				<div class="column" style="color:firebrick">
+				<div class="column3"> </div>
 				
-					<div class="column" style="text-align:center">
+				<div class="column2" style="text-align:center;color:firebrick">
 					<!-- Red Players -->
-					<div id = 'red1ID' style="float:left"></div>
-					<div id = 'red1Code' style="float:left"></div><br>
-					<div id = 'red2ID' style="float:left"></div>
-					<div id = 'red2Code' style="float:left"></div><br>
-					</div>
-					
-					<div class="column" style="text-align:center">
+					<h3 id = 'red1ID' style="float:left"></h3>
+					<h3 id = 'red1Code' style="float:center"></h3>
+					<h3 id = 'red2ID' style="float:left"></h3>
+					<h3 id = 'red2Code' style="float:center"></h3>
+				</div>
+				
+				<div class="column3"> </div>
+				
+				<div class="column2" style="text-align:center;color:firebrick">
 					<!-- Red Player 1 Score -->
 					<h3 id = "red1Score"></h3>
 					
@@ -166,35 +174,32 @@
 					
 					<!-- Red Team Score -->
 					<h3 id = "redTotal"></h3>
-					</div>
-					
 				</div>
 				
-				<div class="column" style="color:seagreen">
-					
-					<div class="column" style="text-align:center">
+				<div class="column3"> </div>
+				
+				<div class="column2" style="text-align:center;color:seagreen">
 					<!-- Green Players -->
-					<div id = 'green1ID' style="float:left"></div>
-					<div id = 'green1Code' style="float:left"></div><br>
-					<div id = 'green2ID' style="float:left"></div>
-					<div id = 'green2Code' style="float:left"></div><br>
-					</div>
-					
-					<div class="column" style="text-align:center">
-						<!-- Green Player 1 Score -->
-						<h3 id = "green3Score"></h3>
-						
-						<!-- Green Player 2 Score -->
-						<h3 id = "green4Score"></h3>
-						
-						<br><br><br><br><br><br><br><br><br><br>
-					
-						<!-- Green Team Score -->
-						<h3 id = "greenTotal"></h3>
-					</div>
-					
+					<h3 id = 'green1ID' style="float:left"></h3>
+					<h3 id = 'green1Code' style="float:center"></h3>
+					<h3 id = 'green2ID' style="float:left"></h3>
+					<h3 id = 'green2Code' style="float:center"></h3>
 				</div>
+					
+				<div class="column3"> </div>	
 				
+				<div class="column2" style="text-align:center;color:seagreen">
+					<!-- Green Player 1 Score -->
+					<h3 id = "green3Score"></h3>
+					
+					<!-- Green Player 2 Score -->
+					<h3 id = "green4Score"></h3>
+					
+					<br><br><br><br><br><br><br><br><br><br>
+				
+					<!-- Green Team Score -->
+					<h3 id = "greenTotal"></h3>
+				</div>
 			</div>
 			
 		</div>
